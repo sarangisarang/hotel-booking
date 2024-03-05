@@ -1,1 +1,3 @@
-insert into Hotel(name,address,phone,email,stars,chechin_Time,checkout_Time) values ('maison','gorgaslis 5','0099523213','bekakikalishvili18@gmail.com',5,'2024-03-02T11:51:45','2024-03-02T11:51:45');
+insert into Hotel(id,name,address,phone,email,stars,chechin_Time,checkout_Time) values ('1','maison','gorgaslis 5','0099523213','bekakikalishvili18@gmail.com',5,'2024-03-02T11:51:45','2024-03-02T11:51:45');
+insert into Hotel(id,name,address,phone,email,stars,chechin_Time,checkout_Time) values ('2','maison','gorgaslis 5','0099523213','bekakikalishvili18@gmail.com',5,'2024-03-02T11:51:45','2024-03-02T11:51:45');
+insert into Hotel(id,name,address,phone,email,stars,chechin_Time,checkout_Time) values ('3','maison','gorgaslis 5','0099523213','bekakikalishvili18@gmail.com',5,'2024-03-02T11:51:45','2024-03-02T11:51:45');

@@ -23,6 +23,14 @@ public class HotelController {
     public ResponseEntity<Hotel> allShow(@PathVariable String name){
         return new ResponseEntity<>((Hotel) hotelService.findHotelByName(name), HttpStatus.OK);
     }
+    @DeleteMapping("/hotels/{id}")
+    public ResponseEntity<Hotel> deleteHotel(@PathVariable String id) {
+        hotelService.deleteHotel(id);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
+    //@DeleteMapping("/hotels/{Id}")
+    //public ResponseEntity<Hotel> deleteHotel(@PathVariable String Id){
+    //  return new ResponseEntity<>(hotelService.deleteHotel(Id), HttpStatus.OK);
 
     //    @GetMapping("/hotels")
 //    //???

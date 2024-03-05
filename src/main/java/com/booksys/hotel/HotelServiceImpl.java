@@ -17,14 +17,15 @@ public class HotelServiceImpl implements HotelService{
     }
 
     @Override
-    public void deleteHotel(UUID hotelId) {
+    public void deleteHotel(String hotelId) {
+        Hotel findHotel = hotelRepository.findById(hotelId).orElseThrow();
+        hotelRepository.delete(findHotel);
 
     }
 
     @Override
     public List<Hotel> findHotelByName(String name) {
-        List<Hotel> hotelName2 = hotelRepository.findAllByHotelName(name);
-            return hotelName2;
+            return null;
     }
 
     @Override

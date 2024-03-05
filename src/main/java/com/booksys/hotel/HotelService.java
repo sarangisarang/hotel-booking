@@ -4,7 +4,7 @@ import java.util.UUID;
 
 public interface HotelService {
     Hotel save(Hotel hotel);
-    void deleteHotel(UUID hotelId);
+    void deleteHotel(String hotelId);
     List<Hotel> findHotelByName(String name);
     Hotel findHotelById(UUID hotelId);
 }
