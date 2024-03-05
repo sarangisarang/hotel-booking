@@ -35,23 +35,5 @@ public class HotelController {
         hotelService.deleteHotel(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
-
-
-
-
-    //@DeleteMapping("/hotels/{Id}")
-    //public ResponseEntity<Hotel> deleteHotel(@PathVariable String Id){
-    //  return new ResponseEntity<>(hotelService.deleteHotel(Id), HttpStatus.OK);
-
-    //    @GetMapping("/hotels")
-//    //???
-//    public ResponseEntity<String> findAll(@RequestBody Hotel hotel){
-//        return new ResponseEntity<>(hotelService.findHotelByName(hotel.getName());
-//    }
-//    @GetMapping("/hotelId")
-//    //??
-//    public  ResponseEntity<String> findForID(@RequestBody Hotel hotel){
-//        return new ResponseEntity<>(hotelService.findHotelById(),HttpStatus.OK);
-//    }
 }
 

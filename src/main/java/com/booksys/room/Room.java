@@ -11,8 +11,9 @@ import java.util.UUID;
 @Entity
 public class Room {
     @Id
-    @GeneratedValue
-    private UUID roomId;
+//    @GeneratedValue
+//    private UUID roomId;
+    private String id;
     private int room;
     private int hotell;
     private int typeId;
