@@ -27,8 +27,7 @@ public class HotelController {
 
     @GetMapping("/hotel/{name}")
     public ResponseEntity<List<Hotel>> findHotelName(@PathVariable String name) {
-         List<Hotel>  hotelName=hotelService.findHotelByName(name);
-        return new  ResponseEntity<>(hotelName, HttpStatus.OK);
+        return new  ResponseEntity<>(hotelService.findHotelByName(name), HttpStatus.OK);
     }
 
     @DeleteMapping("/hotels/{id}")

@@ -12,6 +12,7 @@ public class HotelServiceImpl implements HotelService{
     public HotelServiceImpl(HotelRepository hotelRepository){
         this.hotelRepository = hotelRepository;
     }
+
     @Override
     public Hotel save(Hotel hotel) {
         return hotelRepository.save(hotel);
@@ -21,7 +22,6 @@ public class HotelServiceImpl implements HotelService{
     public void deleteHotel(String hotelId) {
         Hotel findHotel = hotelRepository.findById(hotelId).orElseThrow();
         hotelRepository.delete(findHotel);
-
     }
 
     @Override
