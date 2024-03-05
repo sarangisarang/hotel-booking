@@ -1,6 +1,7 @@
 package com.booksys.hotel;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -25,7 +26,7 @@ public class HotelServiceImpl implements HotelService{
 
     @Override
     public List<Hotel> findHotelByName(String name) {
-            return null;
+        return hotelRepository.findByName(name);
     }
 
     @Override

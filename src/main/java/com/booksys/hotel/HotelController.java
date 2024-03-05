@@ -15,14 +15,20 @@ public class HotelController {
     private HotelService hotelService;
 
     @PostMapping("/save")
-    public ResponseEntity<Hotel> save(@RequestBody Hotel hotel){
+    public ResponseEntity<Hotel> save(@RequestBody Hotel hotel) {
         return new ResponseEntity<>(hotelService.save(hotel), HttpStatus.OK);
     }
 
 
     @GetMapping("/hotels/{id}")
     public ResponseEntity<Hotel> findHotelById(@PathVariable String id) {
-        return new ResponseEntity<>(hotelService.findHotelById(id),HttpStatus.OK);
+        return new ResponseEntity<>(hotelService.findHotelById(id), HttpStatus.OK);
+    }
+
+    @GetMapping("/hotel/{name}")
+    public ResponseEntity<List<Hotel>> findHotelName(@PathVariable String name) {
+         List<Hotel>  hotelName=hotelService.findHotelByName(name);
+        return new  ResponseEntity<>(hotelName, HttpStatus.OK);
     }
 
     @DeleteMapping("/hotels/{id}")
@@ -30,6 +36,10 @@ public class HotelController {
         hotelService.deleteHotel(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
+
+
+
+
     //@DeleteMapping("/hotels/{Id}")
     //public ResponseEntity<Hotel> deleteHotel(@PathVariable String Id){
     //  return new ResponseEntity<>(hotelService.deleteHotel(Id), HttpStatus.OK);
