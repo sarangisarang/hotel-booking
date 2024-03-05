@@ -19,10 +19,12 @@ public class HotelController {
         return new ResponseEntity<>(hotelService.save(hotel), HttpStatus.OK);
     }
 
-    @GetMapping("/hotels/{name}")
-    public ResponseEntity<Hotel> allShow(@PathVariable String name){
-        return new ResponseEntity<>((Hotel) hotelService.findHotelByName(name), HttpStatus.OK);
+
+    @GetMapping("/hotels/{id}")
+    public ResponseEntity<Hotel> findHotelById(@PathVariable String id) {
+        return new ResponseEntity<>(hotelService.findHotelById(id),HttpStatus.OK);
     }
+
     @DeleteMapping("/hotels/{id}")
     public ResponseEntity<Hotel> deleteHotel(@PathVariable String id) {
         hotelService.deleteHotel(id);
