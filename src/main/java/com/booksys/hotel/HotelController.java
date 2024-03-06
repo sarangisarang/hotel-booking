@@ -3,7 +3,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.UUID;
 
@@ -20,7 +19,7 @@ public class HotelController {
     }
 
     @GetMapping("/hotels/{id}")
-    public ResponseEntity<Hotel> findHotelById(@PathVariable String id) {
+    public ResponseEntity<Hotel> findHotelById(@PathVariable UUID id) {
         return new ResponseEntity<>(hotelService.findHotelById(id), HttpStatus.OK);
     }
 
@@ -30,7 +29,7 @@ public class HotelController {
     }
 
     @DeleteMapping("/hotels/{id}")
-    public ResponseEntity<?> deleteHotel(@PathVariable String id) {
+    public ResponseEntity<Hotel> deleteHotel(@PathVariable String id) {
         hotelService.deleteHotel(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
@@ -39,10 +38,5 @@ public class HotelController {
     public ResponseEntity<List<Hotel>> findAll(){
         return new ResponseEntity<>(hotelService.findAll(), HttpStatus.OK);
     }
-//    @GetMapping("/hotelId")
-//    //??
-//    public  ResponseEntity<String> findForID(@RequestBody Hotel hotel){
-//        return new ResponseEntity<>(hotelService.findHotelById(),HttpStatus.OK);
-//    }
 }
 

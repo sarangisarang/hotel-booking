@@ -16,13 +16,14 @@ public class RoomController {
         return new ResponseEntity<>(roomService.save(room),HttpStatus.OK);
     }
 
-//    @GetMapping("/room")
-//    //??
-//    public ResponseEntity<Room> Room(@RequestBody Room room){
-//        return new ResponseEntity<>(roomService.findRoomByName(???,HttpStatus.OK);
-//    }
-//    @DeleteMapping("/delete/{id}")
-//    public ResponseEntity<Room> deleteRoom(@PathVariable String id){
-//        return new ResponseEntity<>(roomService.deleteRoom(id));
-//    }
+    @GetMapping("/room/{id}")
+    public ResponseEntity<Room> findRoomById(@PathVariable String id){
+        return new ResponseEntity<>(roomService.findRoomById(id),HttpStatus.OK);
+    }
+
+    @DeleteMapping("/room/{id}")
+    public ResponseEntity<Room> deleteRoomById(@PathVariable String id){
+        roomService.deleteRoom(id);
+        return  ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
 }
