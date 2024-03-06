@@ -19,7 +19,6 @@ public class HotelController {
         return new ResponseEntity<>(hotelService.save(hotel), HttpStatus.OK);
     }
 
-
     @GetMapping("/hotels/{id}")
     public ResponseEntity<Hotel> findHotelById(@PathVariable String id) {
         return new ResponseEntity<>(hotelService.findHotelById(id), HttpStatus.OK);
@@ -31,23 +30,15 @@ public class HotelController {
     }
 
     @DeleteMapping("/hotels/{id}")
-    public ResponseEntity<Hotel> deleteHotel(@PathVariable String id) {
+    public ResponseEntity<?> deleteHotel(@PathVariable String id) {
         hotelService.deleteHotel(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
-
-
-
-    //@DeleteMapping("/hotels/{Id}")
-    //public ResponseEntity<Hotel> deleteHotel(@PathVariable String Id){
-    //  return new ResponseEntity<>(hotelService.deleteHotel(Id), HttpStatus.OK);
-
-    //    @GetMapping("/hotels")
-//    //???
-//    public ResponseEntity<String> findAll(@RequestBody Hotel hotel){
-//        return new ResponseEntity<>(hotelService.findHotelByName(hotel.getName());
-//    }
+    @GetMapping("/hotels")
+    public ResponseEntity<List<Hotel>> findAll(){
+        return new ResponseEntity<>(hotelService.findAll(), HttpStatus.OK);
+    }
 //    @GetMapping("/hotelId")
 //    //??
 //    public  ResponseEntity<String> findForID(@RequestBody Hotel hotel){

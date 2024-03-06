@@ -7,4 +7,6 @@ public interface HotelService {
     void deleteHotel(String hotelId);
     List<Hotel> findHotelByName(String name);
     Hotel findHotelById(String hotelId);
+
+    List<Hotel> findAll();
 }

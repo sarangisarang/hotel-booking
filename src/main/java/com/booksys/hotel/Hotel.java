@@ -15,9 +15,8 @@ import java.util.UUID;
 @Getter
 public class Hotel {
     @Id
-//  @GeneratedValue
-//  private UUID hotelId;
-    private String Id;
+    @GeneratedValue
+    private UUID Id;
     private String name;
     private String address;
     private String phone;
