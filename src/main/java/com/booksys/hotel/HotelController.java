@@ -29,7 +29,7 @@ public class HotelController {
     }
 
     @DeleteMapping("/hotels/{id}")
-    public ResponseEntity<Hotel> deleteHotel(@PathVariable String id) {
+    public ResponseEntity<Hotel> deleteHotel(@PathVariable UUID id) {
         hotelService.deleteHotel(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
