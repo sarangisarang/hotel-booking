@@ -1,7 +1,6 @@
 package com.booksys.hotel;
 import org.springframework.stereotype.Service;
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -19,8 +18,8 @@ public class HotelServiceImpl implements HotelService{
     }
 
     @Override
-    public void deleteHotel(String hotelId) {
-        Hotel findHotel = hotelRepository.findById(hotelId).orElseThrow();
+    public void deleteHotel(UUID hotelId) {
+        Hotel findHotel = (Hotel) hotelRepository.findAllById(hotelId).orElseThrow();
         hotelRepository.delete(findHotel);
     }
 
