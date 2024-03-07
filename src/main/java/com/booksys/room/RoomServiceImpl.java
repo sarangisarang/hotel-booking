@@ -22,13 +22,14 @@ public class RoomServiceImpl implements RoomService{
     }
 
     @Override
-    public void deleteRoom(String roomId) {
-        Room hotelRoom = roomRepository.findById(roomId).orElseThrow();
+    public void deleteRoom(UUID roomId) {
+        Room hotelRoom = (Room) roomRepository.findAllById(roomId).orElseThrow();
         roomRepository.delete(hotelRoom);
     }
 
     @Override
-    public Room findRoomById(String roomId) {
-        return roomRepository.findById(roomId).orElseThrow();
+    public Room findRoomById(UUID roomId) {
+        Room roomIdResponse = (Room) roomRepository.findAllById(roomId).orElseThrow();
+        return roomIdResponse;
     }
 }

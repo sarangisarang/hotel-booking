@@ -4,7 +4,7 @@ import java.util.UUID;
 
 public interface RoomService {
     Room save(Room room);
-    void deleteRoom(String roomId);
+    void deleteRoom(UUID roomId);
     List<Room> findRoomByName(String name);
-    Room findRoomById(String roomId);
+    Object findRoomById(UUID roomId);
 }
