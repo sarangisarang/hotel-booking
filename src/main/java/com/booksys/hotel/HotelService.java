@@ -6,6 +6,6 @@ public interface HotelService {
     Hotel save(Hotel hotel);
     void deleteHotel(UUID hotelId);
     List<Hotel> findHotelByName(String name);
-    Hotel findHotelById(UUID hotelId);
+    Hotel findHotelById(UUID hotelFindId);
     List<Hotel> findAll();
 }

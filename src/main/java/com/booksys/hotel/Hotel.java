@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.sql.Timestamp;
-import java.time.LocalDateTime;
 import java.util.UUID;
 
 
@@ -16,7 +15,7 @@ import java.util.UUID;
 public class Hotel {
     @Id
     @GeneratedValue
-    private UUID Id;
+    private UUID id;
     private String name;
     private String address;
     private String phone;

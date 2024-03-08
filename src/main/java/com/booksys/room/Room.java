@@ -1,7 +1,7 @@
 package com.booksys.room;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import com.booksys.hotel.Hotel;
+import com.booksys.roomtype.RoomType;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import java.util.UUID;
@@ -14,7 +14,13 @@ public class Room {
     @GeneratedValue
     private UUID id;
     private int room;
-    private int hotell;
-    private int typeId;
     private String status;
+
+    @ManyToOne
+    @JoinColumn(name = "hotell_id")
+    private Hotel hotel;
+
+    @ManyToOne
+    @JoinColumn(name = "type_id")
+    private RoomType roomType;
 }
