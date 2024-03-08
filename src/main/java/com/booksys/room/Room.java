@@ -1,6 +1,7 @@
 package com.booksys.room;
 import com.booksys.hotel.Hotel;
 import com.booksys.roomtype.RoomType;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,11 +14,11 @@ public class Room {
     @Id
     @GeneratedValue
     private UUID id;
-    private int room;
     private String status;
 
+    @JsonBackReference
     @ManyToOne
-    @JoinColumn(name = "hotell_id")
+    @JoinColumn(name = "hotel_id")
     private Hotel hotel;
 
     @ManyToOne
