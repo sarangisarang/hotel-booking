@@ -7,15 +7,10 @@
     <list default="true" id="75d41fcd-92cf-4385-bb52-fdf15e1d0717" name="Changes" comment="Merge remote-tracking branch 'github/develop' into develop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/booking/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/booking/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/guest/Guest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/guest/Guest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/payment/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/payment/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/room/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/room/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/roomtype/RoomType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/roomtype/RoomType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/staff/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/staff/Staff.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,20 +61,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HotelApplication.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/python/dev/marketing",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.34416243",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HotelApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/python/dev/marketing&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.34416243&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="HotelApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.booksys.HotelApplication" />
@@ -381,7 +376,31 @@
       <option name="project" value="LOCAL" />
       <updated>1709919196700</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1709922948804</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1709922948804</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1709922956238</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1709922956238</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1709922963947</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1709922963948</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -426,24 +445,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'github/develop' into develop" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelController.java</url>
-          <line>21</line>
-          <properties class="com.booksys.hotel.HotelController" method="findHotelById">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelController.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="org.apache.catalina.connector.RequestFacade" memberName="request" />

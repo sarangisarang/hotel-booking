@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/booksys/hotel")
+@RequestMapping("/booksys/hotels")
 public class HotelController {
 
     @Autowired
@@ -18,7 +18,7 @@ public class HotelController {
         return new ResponseEntity<>(hotelService.save(hotel), HttpStatus.OK);
     }
 
-    @GetMapping("/hotels/{id}")
+    @GetMapping("/hotel/{id}")
     public ResponseEntity<Hotel> findHotelById(@PathVariable UUID id) {
         return new ResponseEntity<>(hotelService.findHotelById(id), HttpStatus.OK);
     }
