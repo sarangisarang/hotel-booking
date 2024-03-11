@@ -2,3 +2,5 @@ insert into Hotel(id,name,address,phone,email,stars,chechin_Time,checkout_Time) 
 insert into Hotel(id,name,address,phone,email,stars,chechin_Time,checkout_Time) values ('4304a544-b508-41c0-89fd-8bf7cf02a09b','maison','gorgaslis 5','0099523213','bekakikalishvili18@gmail.com',5,'2024-03-02T11:51:45','2024-03-02T11:51:45');
 insert into Hotel(id,name,address,phone,email,stars,chechin_Time,checkout_Time) values ('fd6f9c8d-f15a-448f-83d3-8e55d2c8b498','maison','gorgaslis 5','0099523213','bekakikalishvili18@gmail.com',5,'2024-03-02T11:51:45','2024-03-02T11:51:45');
 insert into Hotel(id,name,address,phone,email,stars,chechin_Time,checkout_Time) values ('fd6f9c8d-f15a-448f-83d3-8e55d2c8b345','maison','gorgaslis 5','0099523213','irakligogrebashvili8@gmail.com',5,'2024-03-02T11:51:45','2024-03-02T11:51:45');
+insert into Room(id,hotel_id) values ('37efce41-bb60-42bd-a8ff-bd458a5700d9','fd6f9c8d-f15a-448f-83d3-8e55d2c8b345');
+insert into Room(id,hotel_id) values ('0e6bd174-e676-40e7-bb18-06d8ab8555ed','fd6f9c8d-f15a-448f-83d3-8e55d2c8b345');

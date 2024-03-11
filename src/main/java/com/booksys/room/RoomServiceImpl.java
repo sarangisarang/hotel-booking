@@ -1,6 +1,8 @@
 package com.booksys.room;
+import com.booksys.hotel.Hotel;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 @Service
@@ -31,5 +33,10 @@ public class RoomServiceImpl implements RoomService{
     public Room findRoomById(UUID roomId) {
         Room roomIdResponse = (Room) roomRepository.findAllById(roomId).orElseThrow();
         return roomIdResponse;
+    }
+
+    @Override
+    public Set<Room> findAllByHotel(Hotel hotel) {
+        return roomRepository.findAllByHotel(hotel);
     }
 }
