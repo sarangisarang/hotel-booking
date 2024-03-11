@@ -19,7 +19,9 @@ public class GuestServiceImpl implements GuestService{
     }
 
     @Override
-    public void deleteguest(UUID id) {
+    public void deleteGuest(UUID id) {
+       Guest guestFind = (Guest) guestRepository.findById(id).orElseThrow();
+       guestRepository.delete(guestFind);
     }
 
     @Override
@@ -28,9 +30,10 @@ public class GuestServiceImpl implements GuestService{
     }
 
     @Override
-    public List<Guest> findByName(String name) {
-        return null;
+    public List<Guest> findByFirstName(String firstName) {
+        return guestRepository.findByfirstName(firstName);
     }
+
     @Override
     public Guest findAll(){
         return (Guest) guestRepository.findAll();

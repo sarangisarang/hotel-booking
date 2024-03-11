@@ -27,7 +27,7 @@ public class BookingController {
     @DeleteMapping("/booking/{id}")
     public ResponseEntity<Booking> deleteBooking(@PathVariable UUID id){
         bookingService.deleteBooking(id);
-        return ResponseEntity.status(HttpStatus.OK).build();
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
     @GetMapping("/bookings")
     public ResponseEntity<List<Booking>> showAll(){
