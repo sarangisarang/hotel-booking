@@ -30,7 +30,7 @@ public class BookingController {
         return ResponseEntity.status(HttpStatus.OK).build();
     }
     @GetMapping("/bookings")
-    public ResponseEntity<List<Booking>> showAll(@RequestBody Booking booking){
+    public ResponseEntity<List<Booking>> showAll(){
         return new ResponseEntity<>(bookingService.findAll(),HttpStatus.OK);
     }
 }
