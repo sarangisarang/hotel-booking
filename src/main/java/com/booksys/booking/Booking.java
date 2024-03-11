@@ -14,7 +14,7 @@ import java.util.UUID;
 public class Booking {
     @Id
     @GeneratedValue
-    private UUID bookingID;
+    private UUID id;
     private LocalDate checkingDate;
     private LocalDate checkoutDate;
     private BigDecimal totalPrice;

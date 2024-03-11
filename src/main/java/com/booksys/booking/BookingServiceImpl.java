@@ -1,4 +1,26 @@
 package com.booksys.booking;
 
-public class BookingServiceImpl {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.UUID;
+
+@Service
+public class BookingServiceImpl implements BookingService{
+
+    private final BookingRepository bookingRepository;
+
+    public BookingServiceImpl(BookingRepository bookingRepository) {
+        this.bookingRepository = bookingRepository;
+    }
+
+    @Override
+    public Booking save(Booking booking){
+        return bookingRepository.save(booking);
+    }
+    @Override
+    public Booking findBookingById(UUID uuid){
+        return (Booking) bookingRepository.findById(uuid).orElseThrow();
+    }
+
 }
