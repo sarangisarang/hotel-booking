@@ -7,5 +7,4 @@ import java.util.UUID;
 
 public interface BookingRepository extends JpaRepository<Booking,String> {
     Optional<Object> findById(UUID uuid);
-
 }

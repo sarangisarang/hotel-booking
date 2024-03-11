@@ -14,12 +14,11 @@ import java.util.UUID;
 public class Guest {
     @Id
     @GeneratedValue
-    private UUID guestID;
+    private UUID id;
     private String firstName;
     private String lastName;
     private LocalDate datoOfBirth;
     private String address;
     private String phone;
     private String email;
-
 }
