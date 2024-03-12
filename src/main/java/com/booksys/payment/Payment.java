@@ -13,13 +13,12 @@ import java.util.UUID;
 public class Payment {
     @Id
     @GeneratedValue
-    private UUID PaymentID;
+    private UUID paymentID;
     private BigDecimal amount;
-    private LocalDate PaymentDate;
-    private String PaymentMetho;
+    private LocalDate paymentDate;
+    private String paymentMetho;
 
     @ManyToOne
     @JoinColumn(name = "booking_id")
     private Booking booking;
-
 }

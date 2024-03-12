@@ -1,4 +1,10 @@
 package com.booksys.payment;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PaymentRepository {
+import java.util.Optional;
+import java.util.UUID;
+
+
+public interface PaymentRepository extends JpaRepository<Payment,String> {
+    Optional<Object> findBypaymentID(UUID uuid);
 }
