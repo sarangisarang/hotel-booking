@@ -19,7 +19,8 @@ public class PaymentServiceImpl implements PaymentService{
 
     @Override
     public void deletePaymentById(UUID payimentId) {
-
+       Payment payment = (Payment) paymentRepository.findBypaymentID(payimentId).orElseThrow();
+       paymentRepository.delete(payment);
     }
 
     @Override
@@ -34,6 +35,6 @@ public class PaymentServiceImpl implements PaymentService{
 
     @Override
     public List<Payment> findAll() {
-        return null;
+        return paymentRepository.findAll();
     }
 }

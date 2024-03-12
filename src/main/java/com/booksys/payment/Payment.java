@@ -16,7 +16,7 @@ public class Payment {
     private UUID paymentID;
     private BigDecimal amount;
     private LocalDate paymentDate;
-    private String paymentMetho;
+    private String paymentMethod;
 
     @ManyToOne
     @JoinColumn(name = "booking_id")
