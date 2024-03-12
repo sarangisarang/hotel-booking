@@ -1,6 +1,5 @@
 package com.booksys.booking;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,11 +20,11 @@ public class BookingServiceImpl implements BookingService{
     }
     @Override
     public Booking findBookingById(UUID uuid){
-        return (Booking) bookingRepository.findById(uuid).orElseThrow();
+        return (Booking) bookingRepository.findBybookingID(uuid).orElseThrow();
     }
     @Override
     public void deleteBooking(UUID id){
-        Booking bookingId = (Booking) bookingRepository.findById(id).orElseThrow();
+        Booking bookingId = (Booking) bookingRepository.findBybookingID(id).orElseThrow();
         bookingRepository.delete(bookingId);
     }
     @Override

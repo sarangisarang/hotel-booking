@@ -27,6 +27,7 @@ public class Hotel {
     private Integer stars;
     private Timestamp chechinTime;
     private Timestamp checkoutTime;
+
     @JsonManagedReference
     @OneToMany(mappedBy = "hotel")
     private Set<Room> rooms;

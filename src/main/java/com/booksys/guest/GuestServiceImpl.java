@@ -20,13 +20,13 @@ public class GuestServiceImpl implements GuestService{
 
     @Override
     public void deleteGuest(UUID id) {
-       Guest guestFind = (Guest) guestRepository.findById(id).orElseThrow();
+       Guest guestFind = (Guest) guestRepository.findByguestID(id).orElseThrow();
        guestRepository.delete(guestFind);
     }
 
     @Override
     public Guest findById(UUID id) {
-        return (Guest) guestRepository.findById(id).orElseThrow();
+        return (Guest) guestRepository.findByguestID(id).orElseThrow();
     }
 
     @Override

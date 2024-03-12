@@ -14,7 +14,7 @@ import java.util.UUID;
 public class Guest {
     @Id
     @GeneratedValue
-    private UUID id;
+    private UUID guestID;
     private String firstName;
     private String lastName;
     private LocalDate datoOfBirth;

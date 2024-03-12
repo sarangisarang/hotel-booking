@@ -25,13 +25,13 @@ public class RoomServiceImpl implements RoomService{
 
     @Override
     public void deleteRoom(UUID roomId) {
-        Room hotelRoom = (Room) roomRepository.findAllById(roomId).orElseThrow();
+        Room hotelRoom = (Room) roomRepository.findAllByroomID(roomId).orElseThrow();
         roomRepository.delete(hotelRoom);
     }
 
     @Override
     public Room findRoomById(UUID roomId) {
-        Room roomIdResponse = (Room) roomRepository.findAllById(roomId).orElseThrow();
+        Room roomIdResponse = (Room) roomRepository.findAllByroomID(roomId).orElseThrow();
         return roomIdResponse;
     }
 

@@ -6,12 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="75d41fcd-92cf-4385-bb52-fdf15e1d0717" name="Changes" comment="Merge remote-tracking branch 'github/develop' into develop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/booking/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/booking/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/guest/Guest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/guest/Guest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/guest/GuestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/guest/GuestRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/guest/GuestServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/guest/GuestServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/payment/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/payment/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/room/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/room/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,14 +123,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709065921987</updated>
-    </task>
-    <task id="LOCAL-00001" summary="develop: add HotelController">
-      <option name="closed" value="true" />
-      <created>1709411389393</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1709411389393</updated>
     </task>
     <task id="LOCAL-00002" summary="develop: add HotelController">
       <option name="closed" value="true" />
@@ -503,7 +500,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710171176600</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1710241261836</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1710241261836</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1710241265550</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1710241265550</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -12,7 +12,7 @@ import java.util.UUID;
 public class Room {
     @Id
     @GeneratedValue
-    private UUID id;
+    private UUID roomID;
     private String status;
 
 

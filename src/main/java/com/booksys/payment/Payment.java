@@ -1,5 +1,4 @@
 package com.booksys.payment;
-
 import com.booksys.booking.Booking;
 import jakarta.persistence.*;
 import lombok.Getter;
