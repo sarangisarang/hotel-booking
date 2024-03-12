@@ -24,11 +24,6 @@ public class PaymentServiceImpl implements PaymentService{
     }
 
     @Override
-    public List<Payment> findByName(String name) {
-        return null;
-    }
-
-    @Override
     public Payment findById(UUID id) {
         return (Payment) paymentRepository.findBypaymentID(id).orElseThrow();
     }
