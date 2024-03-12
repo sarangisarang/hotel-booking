@@ -20,7 +20,7 @@ public class HotelController {
 
     @GetMapping("/hotel/{id}")
     public ResponseEntity<Hotel> findHotelById(@PathVariable UUID id) {
-        return new ResponseEntity<>(hotelService.findHotelById(id), HttpStatus.OK);
+        return new ResponseEntity<>(hotelService.findHotelByhotelID(id), HttpStatus.OK);
     }
 
     @GetMapping("/hotel/{name}")

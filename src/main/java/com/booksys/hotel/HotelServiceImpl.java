@@ -19,7 +19,7 @@ public class HotelServiceImpl implements HotelService{
 
     @Override
     public void deleteHotel(UUID hotelId) {
-        Hotel findHotel = (Hotel) hotelRepository.findAllById(hotelId).orElseThrow();
+        Hotel findHotel = (Hotel) hotelRepository.findAllByhotelID(hotelId).orElseThrow();
         hotelRepository.delete(findHotel);
     }
 
@@ -29,8 +29,8 @@ public class HotelServiceImpl implements HotelService{
     }
 
     @Override
-    public Hotel findHotelById(UUID hotelFindId) {
-        return (Hotel) hotelRepository.findAllById(hotelFindId).orElseThrow();
+    public Hotel findHotelByhotelID(UUID hotelID) {
+        return (Hotel) hotelRepository.findAllByhotelID(hotelID).orElseThrow();
     }
 
     @Override
