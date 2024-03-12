@@ -31,6 +31,8 @@ public class RoomTypeServiceImpl implements RoomTypeService {
 
     @Override
     public List<RoomType> deleteByid(UUID id) {
-        return null;
+        RoomType roomTypes = (RoomType) roomTypeRepository.findBytypeId(id).orElseThrow();
+        roomTypeRepository.delete(roomTypes);
+        return roomTypeRepository.findAll();
     }
 }

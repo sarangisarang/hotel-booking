@@ -31,4 +31,9 @@ public class RoomTypeController {
     public ResponseEntity<RoomType> findByidRoomType(@PathVariable UUID id){
         return new ResponseEntity<>(roomTypeService.findbyId(id),HttpStatus.OK);
     }
+
+    @DeleteMapping("/roomtype/{id}")
+    public ResponseEntity<List<RoomType>> deleteByRoomType(@PathVariable UUID id){
+        return new ResponseEntity<>(roomTypeService.deleteByid(id),HttpStatus.NO_CONTENT);
+    }
 }
