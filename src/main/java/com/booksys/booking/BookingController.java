@@ -20,16 +20,16 @@ public class BookingController {
     public ResponseEntity<Booking> save(@RequestBody Booking booking){
         return new ResponseEntity<>(bookingService.save(booking), HttpStatus.OK);
     }
-    @GetMapping("/booking/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Booking>findBookingId(@PathVariable UUID id){
         return new ResponseEntity<>(bookingService.findBookingById(id),HttpStatus.OK);
     }
-    @DeleteMapping("/booking/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Booking> deleteBooking(@PathVariable UUID id){
         bookingService.deleteBooking(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
-    @GetMapping("/bookings")
+    @GetMapping("/all")
     public ResponseEntity<List<Booking>> showAll(){
         return new ResponseEntity<>(bookingService.findAll(),HttpStatus.OK);
     }
