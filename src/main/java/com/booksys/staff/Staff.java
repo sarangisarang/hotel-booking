@@ -1,5 +1,4 @@
 package com.booksys.staff;
-
 import com.booksys.hotel.Hotel;
 import jakarta.persistence.*;
 import lombok.Getter;

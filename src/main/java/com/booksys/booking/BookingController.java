@@ -29,8 +29,8 @@ public class BookingController {
         bookingService.deleteBooking(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
-    @GetMapping("/all")
-    public ResponseEntity<List<Booking>> showAll(){
-        return new ResponseEntity<>(bookingService.findAll(),HttpStatus.OK);
-    }
+//    @GetMapping("/all")
+//    public ResponseEntity<List<Booking>> showAll(){
+//        return new ResponseEntity<>(bookingService.findAll(),HttpStatus.OK);
+//    }
 }
