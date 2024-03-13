@@ -14,7 +14,7 @@ import java.util.UUID;
 public class Staff {
     @Id
     @GeneratedValue
-    private UUID StaffID;
+    private UUID staffID;
     private String firstName;
     private String lastName;
     private String position;

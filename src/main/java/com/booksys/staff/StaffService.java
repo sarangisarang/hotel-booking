@@ -8,5 +8,5 @@ public interface StaffService {
     void deleteStaffById(UUID id);
     List<Staff> findByName(String name);
     Staff findAllStaff();
-
+    List<Staff> findByIdStaff(UUID id);
 }

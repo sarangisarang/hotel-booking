@@ -20,6 +20,8 @@ public class StaffServiceImpl implements StaffService{
 
     @Override
     public void deleteStaffById(UUID id) {
+        List<Staff> staff= staffRepository.findByStaffID(id);
+        staffRepository.delete((Staff) staff);
     }
 
     @Override
@@ -29,6 +31,11 @@ public class StaffServiceImpl implements StaffService{
 
     @Override
     public Staff findAllStaff() {
-        return null;
+        return (Staff) staffRepository.findAll();
+    }
+
+    @Override
+    public List<Staff> findByIdStaff(UUID id) {
+        return staffRepository.findByStaffID(id);
     }
 }

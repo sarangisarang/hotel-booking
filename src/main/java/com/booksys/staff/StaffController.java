@@ -1,10 +1,8 @@
 package com.booksys.staff;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.UUID;
 
@@ -21,9 +19,24 @@ public class StaffController {
         return  new ResponseEntity<>(staffService.save(staff),HttpStatus.OK);
     }
 
-    @GetMapping("/staff/{name}")
-    public ResponseEntity<List<Staff>> findByIdStaff(@PathVariable String name ){
+    @GetMapping("/{name}")
+    public ResponseEntity<List<Staff>> findByNameStaff(@PathVariable String name ){
         return new ResponseEntity<>(staffService.findByName(name), HttpStatus.OK);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<List<Staff>> findByid(@PathVariable UUID id){
+        return new ResponseEntity<>(staffService.findByIdStaff(id),HttpStatus.OK);
+    }
+
+    @GetMapping("/all")
+    public ResponseEntity<Staff>findAllStaff(){
+        return new ResponseEntity<>(staffService.findAllStaff(),HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Staff> deleteByIdStaff(@PathVariable UUID id){
+        staffService.deleteStaffById(id);
+        return  ResponseEntity.status(HttpStatus.OK).build();
+    }
 }
