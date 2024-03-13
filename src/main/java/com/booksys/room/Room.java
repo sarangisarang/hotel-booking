@@ -13,8 +13,9 @@ public class Room {
     @Id
     @GeneratedValue
     private UUID roomID;
-    private String status;
 
+    @Enumerated(EnumType.STRING)
+    private RoomStatus roomStatus;
 
     @ManyToOne
     @JoinColumn(name = "hotel_id")
