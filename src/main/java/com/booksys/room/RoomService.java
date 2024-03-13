@@ -9,9 +9,7 @@ import java.util.UUID;
 public interface RoomService {
     Room save(Room room);
     void deleteRoom(UUID roomId);
-    List<Room> findRoomByName(String name);
     Object findRoomById(UUID roomId);
-
-    Set<Room> findAllByHotel(Hotel hotel);
+    List<Room> findAllByRoom();
     Set<Room> findAvailableRooms(Hotel hotel, LocalDate checkin, LocalDate checkout);
 }

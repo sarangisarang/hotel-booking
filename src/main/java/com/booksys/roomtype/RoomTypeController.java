@@ -22,17 +22,17 @@ public class RoomTypeController {
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 
-    @GetMapping("/roomtype/{name}")
+    @GetMapping("/{name}")
     public ResponseEntity<List<RoomType>> findBayNameRoomType(@PathVariable String name){
         return new ResponseEntity<>(roomTypeService.findbyName(name),HttpStatus.OK);
     }
 
-    @GetMapping("/roomtype/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<RoomType> findByidRoomType(@PathVariable UUID id){
         return new ResponseEntity<>(roomTypeService.findbyId(id),HttpStatus.OK);
     }
 
-    @DeleteMapping("/roomtype/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<List<RoomType>> deleteByRoomType(@PathVariable UUID id){
         return new ResponseEntity<>(roomTypeService.deleteByid(id),HttpStatus.NO_CONTENT);
     }

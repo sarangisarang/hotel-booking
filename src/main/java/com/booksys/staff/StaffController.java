@@ -30,7 +30,7 @@ public class StaffController {
     }
 
     @GetMapping("/all")
-    public ResponseEntity<Staff>findAllStaff(){
+    public ResponseEntity<Staff> findAllStaff(){
         return new ResponseEntity<>(staffService.findAllStaff(),HttpStatus.OK);
     }
 

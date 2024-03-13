@@ -21,11 +21,6 @@ public class RoomServiceImpl implements RoomService{
     }
 
     @Override
-    public List<Room> findRoomByName(String name) {
-        return null;
-    }
-
-    @Override
     public void deleteRoom(UUID roomId) {
         Room hotelRoom = (Room) roomRepository.findAllByroomID(roomId).orElseThrow();
         roomRepository.delete(hotelRoom);
@@ -38,9 +33,10 @@ public class RoomServiceImpl implements RoomService{
     }
 
     @Override
-    public Set<Room> findAllByHotel(Hotel hotel) {
-        return roomRepository.findAllByHotel(hotel);
+    public List<Room> findAllByRoom() {
+        return roomRepository.findAll();
     }
+
 
     @Override
     public Set<Room> findAvailableRooms(Hotel hotel, LocalDate checkin, LocalDate checkout) {

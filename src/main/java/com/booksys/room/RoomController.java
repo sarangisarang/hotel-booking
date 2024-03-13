@@ -3,6 +3,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -16,9 +18,14 @@ public class RoomController {
         return new ResponseEntity<>(roomService.save(room),HttpStatus.OK);
     }
 
-    @GetMapping("/room/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Room> findRoomById(@PathVariable UUID id){
         return new ResponseEntity<>((Room) roomService.findRoomById(id),HttpStatus.OK);
+    }
+
+    @GetMapping("/all")
+    public ResponseEntity<List<Room>> findAllRoom(){
+        return new ResponseEntity<>(roomService.findAllByRoom(),HttpStatus.OK);
     }
 
     @DeleteMapping("/room/{id}")
