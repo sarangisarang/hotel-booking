@@ -6,3 +6,7 @@ insert into Guest(guestID,first_Name,last_Name,dato_Of_Birth,address,phone,email
 insert into Guest(guestID,first_Name,last_Name,dato_Of_Birth,address,phone,email) values ('fd6f9c8d-f15a-448f-83d3-8e55d2c8b567','iulia','saragona','1945-03-02','graf-Adof-platz 50','+49 823 234 233','saragona@gmail.com');
 insert into Room_type(type_Id,name,description,price_Per_Night,capacity) values ('fd6f9c8d-f15a-448f-83d3-8e55d2c8b234','duplex','1 room, 1 badroom, internet, doeble bad',100.00,3);
 insert into Room(roomID,room_Status,hotel_id,type_id) values ('fd6f9c8d-f15a-448f-83d3-8e55d2c8b567','free','4304a544-b508-41c0-89fd-8bf7cf02a09b','fd6f9c8d-f15a-448f-83d3-8e55d2c8b234');
+insert into Staff(staffId,first_Name,last_Name,positions,salary,date_Of_Birth,phone,email,hotel_id,hire_Date) values('fd6f9c8d-f15a-448f-83d3-8e55d2c8b454','giorgi','xokerashvili','direktor',700,'1965-03-02','xokerashvili@gmail.com','+49 169 2345 333','3ffd712e-9bec-4f41-a586-fbde15fb2915','2022-03-02');
+insert into Booking
+
+

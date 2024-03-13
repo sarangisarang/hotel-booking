@@ -17,7 +17,7 @@ public class Staff {
     private UUID staffID;
     private String firstName;
     private String lastName;
-    private String position;
+    private String positions;
     private BigDecimal salary;
     private LocalDate dateOfBirth;
     private String phone;
