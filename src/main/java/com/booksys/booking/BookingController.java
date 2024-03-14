@@ -5,7 +5,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 @RestController
@@ -32,5 +34,9 @@ public class BookingController {
    @GetMapping("/all")
    public ResponseEntity<List<Booking>> showAll(){
        return new ResponseEntity<>(bookingService.findAll(),HttpStatus.OK);
+   }
+   @GetMapping("/between/{in}/and/{out}")
+   public ResponseEntity<Set<Booking>> allBetween(@PathVariable LocalDate in, @PathVariable LocalDate out){
+       return new ResponseEntity<>(bookingService.findAllBookingsBetween(in, out),HttpStatus.OK);
    }
 }

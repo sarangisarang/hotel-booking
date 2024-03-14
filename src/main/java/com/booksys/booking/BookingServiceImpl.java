@@ -1,6 +1,9 @@
 package com.booksys.booking;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 @Service
@@ -28,5 +31,10 @@ public class BookingServiceImpl implements BookingService{
     @Override
     public List<Booking> findAll(){
         return bookingRepository.findAll();
+    }
+
+    @Override
+    public Set<Booking> findAllBookingsBetween(LocalDate checkin, LocalDate checkout) {
+            return bookingRepository.findByCheckInBetween(checkin, checkout);
     }
 }

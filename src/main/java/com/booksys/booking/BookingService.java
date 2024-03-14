@@ -1,5 +1,8 @@
 package com.booksys.booking;
+
+import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 public interface BookingService {
@@ -7,4 +10,6 @@ public interface BookingService {
     Booking findBookingById(UUID id);
     void deleteBooking(UUID id);
     List<Booking> findAll();
+
+    Set<Booking> findAllBookingsBetween(LocalDate checkin, LocalDate checkout);
 }

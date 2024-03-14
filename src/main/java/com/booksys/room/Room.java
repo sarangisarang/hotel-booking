@@ -1,6 +1,7 @@
 package com.booksys.room;
 import com.booksys.hotel.Hotel;
 import com.booksys.roomtype.RoomType;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,6 +18,7 @@ public class Room {
     @Enumerated(EnumType.STRING)
     private RoomStatus roomStatus;
 
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "hotel_id")
     private Hotel hotel;
