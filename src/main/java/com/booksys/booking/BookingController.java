@@ -18,24 +18,24 @@ public class BookingController {
     private BookingService bookingService;
 
 
-    @PostMapping("/save")
+    @PostMapping("/save")  //ok
     public ResponseEntity<Booking> save(@RequestBody Booking booking){
         return new ResponseEntity<>(bookingService.save(booking), HttpStatus.OK);
     }
-    @GetMapping("/{id}")
+    @GetMapping("/{id}") //ok
     public ResponseEntity<Booking>findBookingId(@PathVariable UUID id){
         return new ResponseEntity<>(bookingService.findBookingById(id),HttpStatus.OK);
     }
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{id}") //ok
     public ResponseEntity<Booking> deleteBookingById(@PathVariable UUID id){
         bookingService.deleteBooking(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
-   @GetMapping("/all")
+   @GetMapping("/all") //ok
    public ResponseEntity<List<Booking>> showAll(){
        return new ResponseEntity<>(bookingService.findAll(),HttpStatus.OK);
    }
-   @GetMapping("/between/{in}/and/{out}")
+   @GetMapping("/between/{in}/and/{out}") // ok
    public ResponseEntity<Set<Booking>> allBetween(@PathVariable LocalDate in, @PathVariable LocalDate out){
        return new ResponseEntity<>(bookingService.findAllBookingsBetween(in, out),HttpStatus.OK);
    }

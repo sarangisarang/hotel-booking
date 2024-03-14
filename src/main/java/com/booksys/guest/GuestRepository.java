@@ -5,7 +5,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface GuestRepository extends JpaRepository<Guest,String>{
-    Optional<Object> findByguestID(UUID id);
+    Optional<Object> findByGuestID(UUID id);
 
-    List<Guest> findByfirstName(String firstName);
+    List<Guest> findByFirstName(String firstName);
 }
