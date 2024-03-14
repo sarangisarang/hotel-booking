@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/booksys/hotels")
+@RequestMapping("/booksys/hotel")
 public class HotelController {
 
     @Autowired

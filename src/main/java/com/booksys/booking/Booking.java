@@ -15,8 +15,8 @@ public class Booking {
     @Id
     @GeneratedValue
     private UUID bookingID;
-    private LocalDate checkingDate;
-    private LocalDate checkoutDate;
+    private LocalDate checkIn;
+    private LocalDate checkOut;
     private BigDecimal totalPrice;
 
     @ManyToOne

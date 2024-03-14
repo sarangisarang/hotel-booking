@@ -5,7 +5,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 
-public interface HotelRepository extends JpaRepository<Hotel, String> {
+public interface HotelRepository extends JpaRepository<Hotel, UUID> {
     List<Hotel> findByName(String name);
 
     Optional<Object> findAllByhotelID(UUID hotelID);
