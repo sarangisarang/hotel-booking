@@ -1,4 +1,5 @@
 package com.booksys.room;
+import com.booksys.booking.BookingService;
 import com.booksys.hotel.Hotel;
 import org.springframework.stereotype.Service;
 
@@ -6,13 +7,16 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 public class RoomServiceImpl implements RoomService{
     private final RoomRepository roomRepository;
+    private final BookingService bookingService;
 
-    public RoomServiceImpl(RoomRepository roomRepository){
+    public RoomServiceImpl(RoomRepository roomRepository, BookingService bookingService){
         this.roomRepository = roomRepository;
+        this.bookingService = bookingService;
     }
 
     @Override
@@ -40,6 +44,8 @@ public class RoomServiceImpl implements RoomService{
 
     @Override
     public Set<Room> findAvailableRooms(Hotel hotel, LocalDate checkin, LocalDate checkout) {
-        return null;
+        Set<Room> bookedRooms = bookingService.findAllBookingsBetween(checkin, checkout).stream().map(b -> b.getRoom()).collect(Collectors.toSet());
+        Set<Room> availableRooms = roomRepository.findAllByHotel(hotel).stream().filter(room -> !bookedRooms.contains(room)).collect(Collectors.toSet());
+        return availableRooms;
     }
 }
