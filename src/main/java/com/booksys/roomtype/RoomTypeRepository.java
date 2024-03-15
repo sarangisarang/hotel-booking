@@ -9,5 +9,5 @@ import java.util.UUID;
 public interface RoomTypeRepository extends JpaRepository<RoomType,String> {
     List<RoomType> findByName(String name);
 
-    Optional<Object> findBytypeId(UUID id);
+    Optional<Object> findByTypeId(UUID id);
 }

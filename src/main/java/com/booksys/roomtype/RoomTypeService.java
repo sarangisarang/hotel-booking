@@ -5,7 +5,8 @@ import java.util.UUID;
 
 public interface RoomTypeService {
     void save(RoomType roomType);
-    List<RoomType>findbyName(String name);
-    RoomType findbyId(UUID id);
+    List<RoomType> findByName(String name);
+    RoomType findById(UUID id);
     List<RoomType> deleteByid(UUID id);
+    List<RoomType> findAll();
 }

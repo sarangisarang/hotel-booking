@@ -20,19 +20,24 @@ public class RoomTypeServiceImpl implements RoomTypeService {
     }
 
     @Override
-    public List<RoomType> findbyName(String name) {
+    public List<RoomType> findByName(String name) {
         return roomTypeRepository.findByName(name);
     }
 
     @Override
-    public RoomType findbyId(UUID id) {
-        return (RoomType) roomTypeRepository.findBytypeId(id).orElseThrow();
+    public RoomType findById(UUID id) {
+        return (RoomType) roomTypeRepository.findByTypeId(id).orElseThrow();
     }
 
     @Override
     public List<RoomType> deleteByid(UUID id) {
-        RoomType roomTypes = (RoomType) roomTypeRepository.findBytypeId(id).orElseThrow();
+        RoomType roomTypes = (RoomType) roomTypeRepository.findByTypeId(id).orElseThrow();
         roomTypeRepository.delete(roomTypes);
+        return roomTypeRepository.findAll();
+    }
+
+    @Override
+    public List<RoomType> findAll() {
         return roomTypeRepository.findAll();
     }
 }
