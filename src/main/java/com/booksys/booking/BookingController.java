@@ -21,7 +21,7 @@ public class BookingController {
     public ResponseEntity<Booking> save(@RequestBody Booking booking){
         return new ResponseEntity<>(bookingService.save(booking), HttpStatus.OK);
     }
-    @GetMapping("/{id}") //ok
+    @GetMapping("bookings/{id}") //ok
     public ResponseEntity<Booking>findBookingId(@PathVariable UUID id){
         return new ResponseEntity<>(bookingService.findBookingById(id),HttpStatus.OK);
     }
