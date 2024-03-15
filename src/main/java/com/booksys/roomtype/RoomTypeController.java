@@ -1,6 +1,5 @@
 package com.booksys.roomtype;
 
-import com.booksys.room.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,22 +15,25 @@ public class RoomTypeController {
     @Autowired
     private RoomTypeService roomTypeService;
 
-    @PostMapping("/save")
+    @PostMapping("/save") //ok
     public ResponseEntity<RoomType>save(@RequestBody RoomType roomType){
         roomTypeService.save(roomType);
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 
-    @GetMapping("/{name}")
-    public ResponseEntity<List<RoomType>> findBayNameRoomType(@PathVariable String name){
-        return new ResponseEntity<>(roomTypeService.findbyName(name),HttpStatus.OK);
+    @GetMapping("/roomtype/{name}") //ok
+    public ResponseEntity<List<RoomType>> findByNameRoomType(@PathVariable String name){
+        return new ResponseEntity<>(roomTypeService.findByName(name),HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<RoomType> findByidRoomType(@PathVariable UUID id){
-        return new ResponseEntity<>(roomTypeService.findbyId(id),HttpStatus.OK);
+    @GetMapping("/roomtyps/{id}") //ok
+    public ResponseEntity<RoomType> findByIdRoomType(@PathVariable UUID id){
+        return new ResponseEntity<>(roomTypeService.findById(id),HttpStatus.OK);
     }
-
+    @GetMapping("/all") //ok
+    public ResponseEntity<List<RoomType>>findall(){
+        return new ResponseEntity<>(roomTypeService.findAll(),HttpStatus.OK);
+    }
     @DeleteMapping("/{id}")
     public ResponseEntity<List<RoomType>> deleteByRoomType(@PathVariable UUID id){
         return new ResponseEntity<>(roomTypeService.deleteByid(id),HttpStatus.NO_CONTENT);
