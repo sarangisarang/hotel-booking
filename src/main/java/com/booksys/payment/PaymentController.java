@@ -13,22 +13,22 @@ public class PaymentController {
     @Autowired
     private PaymentService paymentService;
 
-    @PostMapping("/save")
+    @PostMapping("/save") //ok
     public ResponseEntity<Payment> save(@RequestBody Payment payment){
         return new ResponseEntity<>(paymentService.save(payment), HttpStatus.OK);
     }
 
-    @GetMapping("/payment/{id}")
-    public ResponseEntity<Object> findById(@PathVariable UUID id){
+    @GetMapping("/payments/{id}") // ok
+    public ResponseEntity<Payment> findByIdPayment(@PathVariable UUID id){
         return new ResponseEntity<>(paymentService.findById(id),HttpStatus.OK);
     }
 
-    @GetMapping("/payments")
+    @GetMapping("/all") //ok
     public ResponseEntity<List<Payment>> findAll(){
         return new ResponseEntity<>(paymentService.findAll(),HttpStatus.OK);
     }
 
-    @DeleteMapping("/payment/{id}")
+    @DeleteMapping("/{id}") //ok
     public ResponseEntity<Payment> deletePaymentById(@PathVariable UUID id){
         paymentService.deletePaymentById(id);
         return  ResponseEntity.status(HttpStatus.OK).build();

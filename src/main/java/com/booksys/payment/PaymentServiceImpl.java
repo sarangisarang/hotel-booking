@@ -14,18 +14,18 @@ public class PaymentServiceImpl implements PaymentService{
 
     @Override
     public Payment save(Payment payment) {
-        return null;
+        return paymentRepository.save(payment);
     }
 
     @Override
     public void deletePaymentById(UUID payimentId) {
-       Payment payment = (Payment) paymentRepository.findBypaymentID(payimentId).orElseThrow();
+       Payment payment = (Payment) paymentRepository.findByPaymentID(payimentId).orElseThrow();
        paymentRepository.delete(payment);
     }
 
     @Override
     public Payment findById(UUID id) {
-        return (Payment) paymentRepository.findBypaymentID(id).orElseThrow();
+        return (Payment) paymentRepository.findByPaymentID(id).orElseThrow();
     }
 
     @Override
