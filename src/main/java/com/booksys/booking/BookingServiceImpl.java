@@ -33,7 +33,6 @@ public class BookingServiceImpl implements BookingService{
     public List<Booking> findAll(){
         return bookingRepository.findAll();
     }
-
     @Override
     public Set<Booking> findAllBookingsBetween(LocalDate checkin, LocalDate checkout) {
             return bookingRepository.findByCheckInBetween(checkin, checkout);

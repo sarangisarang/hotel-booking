@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75d41fcd-92cf-4385-bb52-fdf15e1d0717" name="Changes" comment="Merge remote-tracking branch 'github/develop' into develop" />
+    <list default="true" id="75d41fcd-92cf-4385-bb52-fdf15e1d0717" name="Changes" comment="staff ist ok!">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,7 +64,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/python/dev/marketing&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/python/dev/hotel&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.34416243&quot;,
@@ -110,102 +112,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709065921987</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Merge remote-tracking branch 'github/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/booksys/hotel/HotelController.java">
-      <option name="closed" value="true" />
-      <created>1709841729442</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1709841729442</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Merge remote-tracking branch 'github/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/booksys/hotel/HotelController.java">
-      <option name="closed" value="true" />
-      <created>1709841738037</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1709841738037</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Merge remote-tracking branch 'github/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/booksys/hotel/HotelController.java">
-      <option name="closed" value="true" />
-      <created>1709841742222</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1709841742222</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1709847137082</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1709847137082</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1709847145317</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1709847145317</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1709919171390</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1709919171390</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1709919181666</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1709919181666</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1709919196700</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1709919196700</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1709922948804</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1709922948804</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1709922956238</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1709922956238</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1709922963947</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1709922963948</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1710163186056</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1710163186056</updated>
     </task>
     <task id="LOCAL-00038" summary="Merge remote-tracking branch 'github/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/booksys/room/RoomController.java">
       <option name="closed" value="true" />
@@ -503,7 +409,103 @@
       <option name="project" value="LOCAL" />
       <updated>1710349244401</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1710349537928</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1710349537928</updated>
+    </task>
+    <task id="LOCAL-00076" summary="implement findAvailableRooms">
+      <option name="closed" value="true" />
+      <created>1710441963982</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1710441963982</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1710441980924</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1710441980924</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1710442031549</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1710442031549</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1710443511184</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1710443511184</updated>
+    </task>
+    <task id="LOCAL-00080" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1710443518761</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1710443518761</updated>
+    </task>
+    <task id="LOCAL-00081" summary="payment ist ok!!">
+      <option name="closed" value="true" />
+      <created>1710508820705</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1710508820706</updated>
+    </task>
+    <task id="LOCAL-00082" summary="payment ist ok!!">
+      <option name="closed" value="true" />
+      <created>1710508824452</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1710508824452</updated>
+    </task>
+    <task id="LOCAL-00083" summary="payment ist ok!!">
+      <option name="closed" value="true" />
+      <created>1710510504985</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1710510504985</updated>
+    </task>
+    <task id="LOCAL-00084" summary="payment ist ok!!">
+      <option name="closed" value="true" />
+      <created>1710511869170</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1710511869170</updated>
+    </task>
+    <task id="LOCAL-00085" summary="payment ist ok!!">
+      <option name="closed" value="true" />
+      <created>1710511872584</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1710511872584</updated>
+    </task>
+    <task id="LOCAL-00086" summary="staff ist ok!">
+      <option name="closed" value="true" />
+      <created>1710522298146</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1710522298146</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -545,8 +547,12 @@
     <MESSAGE value="add find hotel for UUID Id" />
     <MESSAGE value="Merge remote-tracking branch 'github/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/booksys/hotel/HotelController.java" />
     <MESSAGE value="Merge remote-tracking branch 'github/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/booksys/room/RoomController.java" />
+    <MESSAGE value="implement findAvailableRooms" />
+    <MESSAGE value="payment ist ok!!" />
+    <MESSAGE value="staff ist ok!!" />
     <MESSAGE value="Merge remote-tracking branch 'github/develop' into develop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'github/develop' into develop" />
+    <MESSAGE value="staff ist ok!" />
+    <option name="LAST_COMMIT_MESSAGE" value="staff ist ok!" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

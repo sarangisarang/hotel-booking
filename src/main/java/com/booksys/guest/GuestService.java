@@ -7,5 +7,5 @@ public interface GuestService {
     void deleteGuest(UUID id);
     Guest findById(UUID id);
     List<Guest> findByFirstName(String firstName);
-    Guest findAll();
+    List<Guest> findAll();
 }

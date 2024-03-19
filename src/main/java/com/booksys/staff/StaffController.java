@@ -14,29 +14,28 @@ public class StaffController {
     private StaffService staffService;
 
 
-    @PostMapping("/save")
+    @PostMapping("/save")//ok
     public ResponseEntity<Staff> save(@RequestBody Staff staff){
         return  new ResponseEntity<>(staffService.save(staff),HttpStatus.OK);
     }
 
-    @GetMapping("/{name}")
+    @GetMapping("/staffs/{name}") //ok
     public ResponseEntity<List<Staff>> findByNameStaff(@PathVariable String name ){
         return new ResponseEntity<>(staffService.findByName(name), HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<List<Staff>> findByid(@PathVariable UUID id){
+    @GetMapping("/staff/{id}")//ok
+    public ResponseEntity<Staff> findByid(@PathVariable UUID id){
         return new ResponseEntity<>(staffService.findByIdStaff(id),HttpStatus.OK);
     }
 
-    @GetMapping("/all")
-    public ResponseEntity<Staff> findAllStaff(){
+    @GetMapping("/all")//ok
+    public ResponseEntity<List<Staff>> findAllStaff(){
         return new ResponseEntity<>(staffService.findAllStaff(),HttpStatus.OK);
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Staff> deleteByIdStaff(@PathVariable UUID id){
-        staffService.deleteStaffById(id);
-        return  ResponseEntity.status(HttpStatus.OK).build();
+    @DeleteMapping("/{id}") //ok
+    public ResponseEntity<List<Staff>> deleteByIdStaff(@PathVariable UUID id){
+        return new ResponseEntity<>(staffService.deleteStaffById(id),HttpStatus.OK);
     }
 }

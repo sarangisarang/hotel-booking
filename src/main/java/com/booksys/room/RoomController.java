@@ -20,28 +20,28 @@ public class RoomController {
     @Autowired
     private HotelRepository hotelRepository;
 
-    @PostMapping("/save")
+    @PostMapping("/save") //ok
     public ResponseEntity<Room> save(@RequestBody Room room){
         return new ResponseEntity<>(roomService.save(room),HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{id}") //ok
     public ResponseEntity<Room> findRoomById(@PathVariable UUID id){
         return new ResponseEntity<>((Room) roomService.findRoomById(id),HttpStatus.OK);
     }
 
-    @GetMapping("/all")
+    @GetMapping("/all") //ok
     public ResponseEntity<List<Room>> findAllRoom(){
         return new ResponseEntity<>(roomService.findAllByRoom(),HttpStatus.OK);
     }
 
-    @GetMapping("/{hotelID}/available/between/{in}/and/{out}")
+    @GetMapping("/{hotelID}/available/between/{in}/and/{out}") //need to talk about this.
     public ResponseEntity<Set<Room>> findAvailableRooms(@PathVariable String hotelID, @PathVariable LocalDate in, @PathVariable LocalDate out){
         Hotel hotel = hotelRepository.findById(UUID.fromString(hotelID)).orElseThrow(() -> new RuntimeException("Hotel not found"));
         return new ResponseEntity<>(roomService.findAvailableRooms(hotel, in, out),HttpStatus.OK);
     }
 
-    @DeleteMapping("/room/{id}")
+    @DeleteMapping("/{id}") //ok
     public ResponseEntity<Room> deleteRoomById(@PathVariable UUID id){
         roomService.deleteRoom(id);
         return  ResponseEntity.status(HttpStatus.NO_CONTENT).build();

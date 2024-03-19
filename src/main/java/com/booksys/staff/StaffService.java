@@ -4,8 +4,8 @@ import java.util.UUID;
 
 public interface StaffService {
     Staff save(Staff staff);
-    void deleteStaffById(UUID id);
+    List<Staff> deleteStaffById(UUID id);
     List<Staff> findByName(String name);
-    Staff findAllStaff();
-    List<Staff> findByIdStaff(UUID id);
+    List<Staff> findAllStaff();
+    Staff findByIdStaff(UUID id);
 }
