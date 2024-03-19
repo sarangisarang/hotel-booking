@@ -12,4 +12,5 @@ public interface BookingService {
     List<Booking> findAll();
 
     Set<Booking> findAllBookingsBetween(LocalDate checkin, LocalDate checkout);
+    Set<Booking> findAllBookingsOverlap(LocalDate checkin, LocalDate checkout);
 }
