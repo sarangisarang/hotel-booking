@@ -1,10 +1,8 @@
 package com.booksys.roomtype;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.UUID;
 
@@ -20,12 +18,10 @@ public class RoomTypeController {
         roomTypeService.save(roomType);
         return ResponseEntity.status(HttpStatus.OK).build();
     }
-
     @GetMapping("/roomtype/{name}") //ok
     public ResponseEntity<List<RoomType>> findByNameRoomType(@PathVariable String name){
         return new ResponseEntity<>(roomTypeService.findByName(name),HttpStatus.OK);
     }
-
     @GetMapping("/roomtyps/{id}") //ok
     public ResponseEntity<RoomType> findByIdRoomType(@PathVariable UUID id){
         return new ResponseEntity<>(roomTypeService.findById(id),HttpStatus.OK);
@@ -34,7 +30,7 @@ public class RoomTypeController {
     public ResponseEntity<List<RoomType>>findall(){
         return new ResponseEntity<>(roomTypeService.findAll(),HttpStatus.OK);
     }
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{id}") //ok
     public ResponseEntity<List<RoomType>> deleteByRoomType(@PathVariable UUID id){
         return new ResponseEntity<>(roomTypeService.deleteByid(id),HttpStatus.NO_CONTENT);
     }

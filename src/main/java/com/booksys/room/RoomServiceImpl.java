@@ -2,7 +2,6 @@ package com.booksys.room;
 import com.booksys.booking.BookingService;
 import com.booksys.hotel.Hotel;
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
@@ -40,7 +39,6 @@ public class RoomServiceImpl implements RoomService{
     public List<Room> findAllByRoom() {
         return roomRepository.findAll();
     }
-
 
     @Override
     public Set<Room> findAvailableRooms(Hotel hotel, LocalDate checkin, LocalDate checkout) {
