@@ -33,11 +33,11 @@ public class BookingController {
    public ResponseEntity<List<Booking>> showAll(){
        return new ResponseEntity<>(bookingService.findAll(),HttpStatus.OK);
    }
-   @GetMapping("/between/{in}/and/{out}") // ok
+   @GetMapping("/between/{in}/and/{out}") //ok
    public ResponseEntity<Set<Booking>> allBetween(@PathVariable LocalDate in, @PathVariable LocalDate out){
        return new ResponseEntity<>(bookingService.findAllBookingsBetween(in, out),HttpStatus.OK);
    }
-   @GetMapping("/overlap/{in}/and/{out}")
+   @GetMapping("/overlap/{in}/and/{out}") //ok
    public ResponseEntity<Set<Booking>> allOverlap(@PathVariable LocalDate in,@PathVariable LocalDate out){
         return new ResponseEntity<>(bookingService.findAllBookingsOverlap(in,out),HttpStatus.OK);
    }

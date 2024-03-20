@@ -1,6 +1,5 @@
 package com.booksys.room;
 import com.booksys.hotel.Hotel;
-
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
@@ -12,4 +11,5 @@ public interface RoomService {
     Object findRoomById(UUID roomId);
     List<Room> findAllByRoom();
     Set<Room> findAvailableRooms(Hotel hotel, LocalDate checkin, LocalDate checkout);
+    List<Room> statusChangeByPosicion(UUID id);
 }
