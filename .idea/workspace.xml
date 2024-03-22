@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75d41fcd-92cf-4385-bb52-fdf15e1d0717" name="Changes" comment="Merge remote-tracking branch 'github/develop' into develop">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/booking/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/booking/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/guest/GuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/guest/GuestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/room/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/room/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,14 +148,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709065921987</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1710167575926</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1710167575926</updated>
     </task>
     <task id="LOCAL-00045" summary="Merge remote-tracking branch 'github/develop' into develop">
       <option name="closed" value="true" />
@@ -549,7 +533,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710932994111</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1711119244769</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1711119244769</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

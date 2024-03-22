@@ -4,6 +4,7 @@ import com.booksys.booking.BookingService;
 import com.booksys.hotel.Hotel;
 import org.springframework.stereotype.Service;
 import java.time.LocalDate;
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
@@ -55,6 +56,8 @@ public class RoomServiceImpl implements RoomService{
         LocalDate localDate = LocalDate.now();
         if((booking.getRoom() == findRoomById(id))){
             roomUpdateStatus.setRoomStatus(RoomStatus.reserved);
+            return Collections.singletonList(roomRepository.save(roomUpdateStatus));
         }
+        return null;
     }
 }
