@@ -8,3 +8,9 @@ implement the following usecases
 # book the available room
 - the customer selects available rooms and sends a request to endpoint to book it
 - the endpoint replies with status of booking (ok, not ok)
+
+
+
+
+# Workspace.xml file
+Tracking of local changes to the workspace.xml file can be prevented with the git update-index --assume-unchanged .idea/workspace.xml command
