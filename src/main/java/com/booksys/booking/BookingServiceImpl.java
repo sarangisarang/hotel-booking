@@ -37,7 +37,6 @@ public class BookingServiceImpl implements BookingService{
     public Set<Booking> findAllBookingsBetween(LocalDate checkin, LocalDate checkout) {
             return bookingRepository.findByCheckInBetween(checkin, checkout);
     }
-
     @Override
     public Set<Booking> findAllBookingsOverlap(LocalDate checkin, LocalDate checkout) {
         return bookingRepository.findAll().stream().filter(booking -> isOverlapUsingLocalDateAndDuration(checkin, checkout, booking.getCheckIn(), booking.getCheckOut())).collect(Collectors.toSet());
@@ -51,6 +50,7 @@ public class BookingServiceImpl implements BookingService{
      * @param end2
      * @return
      */
+
     private boolean isOverlapUsingLocalDateAndDuration(LocalDate start1, LocalDate end1, LocalDate start2, LocalDate end2) {
         long overlap = Math.min(end1.toEpochDay(), end2.toEpochDay()) -
                 Math.max(start1.toEpochDay(), start2.toEpochDay());

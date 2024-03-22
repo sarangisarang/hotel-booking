@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.sql.Timestamp;
+import java.time.LocalTime;
 import java.util.Set;
 import java.util.UUID;
 
@@ -25,8 +26,8 @@ public class Hotel {
     private String phone;
     private String email;
     private Integer stars;
-    private Timestamp chechinTime;
-    private Timestamp checkoutTime;
+    private LocalTime chechinTime;
+    private LocalTime checkoutTime;
 
     @JsonManagedReference
     @OneToMany(mappedBy = "hotel")

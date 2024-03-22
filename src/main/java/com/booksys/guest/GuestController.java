@@ -8,7 +8,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/booksys/guest")
-public class GuestController {
+public class GuestController{
 
     @Autowired
     private GuestService guestService;

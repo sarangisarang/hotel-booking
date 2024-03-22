@@ -15,9 +15,6 @@ public class Room {
     @GeneratedValue
     private UUID roomID;
 
-    @Enumerated(EnumType.STRING)
-    private RoomStatus roomStatus;
-
     @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "hotel_id")
@@ -26,4 +23,7 @@ public class Room {
     @ManyToOne
     @JoinColumn(name = "type_id")
     private RoomType roomType;
+
+    @Enumerated(EnumType.STRING)
+    private RoomStatus roomStatus;
 }

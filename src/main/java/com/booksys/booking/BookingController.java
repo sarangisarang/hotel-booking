@@ -3,7 +3,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
@@ -34,8 +33,12 @@ public class BookingController {
    public ResponseEntity<List<Booking>> showAll(){
        return new ResponseEntity<>(bookingService.findAll(),HttpStatus.OK);
    }
-   @GetMapping("/between/{in}/and/{out}") // ok
+   @GetMapping("/between/{in}/and/{out}") //ok
    public ResponseEntity<Set<Booking>> allBetween(@PathVariable LocalDate in, @PathVariable LocalDate out){
        return new ResponseEntity<>(bookingService.findAllBookingsBetween(in, out),HttpStatus.OK);
+   }
+   @GetMapping("/overlap/{in}/and/{out}") //ok
+   public ResponseEntity<Set<Booking>> allOverlap(@PathVariable LocalDate in,@PathVariable LocalDate out){
+        return new ResponseEntity<>(bookingService.findAllBookingsOverlap(in,out),HttpStatus.OK);
    }
 }

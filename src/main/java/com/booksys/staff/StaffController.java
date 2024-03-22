@@ -14,7 +14,7 @@ public class StaffController {
     private StaffService staffService;
 
 
-    @PostMapping("/save")//ok
+    @PostMapping("/save") //ok
     public ResponseEntity<Staff> save(@RequestBody Staff staff){
         return  new ResponseEntity<>(staffService.save(staff),HttpStatus.OK);
     }
@@ -24,12 +24,12 @@ public class StaffController {
         return new ResponseEntity<>(staffService.findByName(name), HttpStatus.OK);
     }
 
-    @GetMapping("/staff/{id}")//ok
+    @GetMapping("/staff/{id}") //ok
     public ResponseEntity<Staff> findByid(@PathVariable UUID id){
         return new ResponseEntity<>(staffService.findByIdStaff(id),HttpStatus.OK);
     }
 
-    @GetMapping("/all")//ok
+    @GetMapping("/all") //ok
     public ResponseEntity<List<Staff>> findAllStaff(){
         return new ResponseEntity<>(staffService.findAllStaff(),HttpStatus.OK);
     }

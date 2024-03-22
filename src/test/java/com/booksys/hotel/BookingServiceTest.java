@@ -1,12 +1,10 @@
 package com.booksys.hotel;
-
 import com.booksys.booking.Booking;
 import com.booksys.booking.BookingService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
 import java.time.LocalDate;
 import java.util.Set;
 
@@ -34,5 +32,4 @@ public class BookingServiceTest {
         Set<Booking> allBookingsOverlap = bookingService.findAllBookingsOverlap(checkin, checkout);
         Assertions.assertTrue(allBookingsOverlap.isEmpty());
     }
-
 }
