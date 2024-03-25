@@ -1,4 +1,5 @@
 package com.booksys.booking;
+import com.booksys.room.Room;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -8,7 +9,7 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
-public class BookingServiceImpl implements BookingService{
+public class BookingServiceImpl implements BookingService {
 
     private final BookingRepository bookingRepository;
 
@@ -17,9 +18,25 @@ public class BookingServiceImpl implements BookingService{
     }
 
     @Override
-    public Booking save(Booking booking){
+    public Booking save(Booking booking) {
         return bookingRepository.save(booking);
     }
+
+    @Override
+    public Booking save(Room room, LocalDate checkin, LocalDate checkout) {
+        //validacion
+        Set<Booking> rooms = findAllBookingsOverlap(room, checkin, checkout);
+        if (rooms != null && !rooms.isEmpty()) {
+            throw new RuntimeException("This room not avaible");
+        }
+        Booking booking = new Booking();
+        booking.setRoom(room);
+        booking.setCheckIn(checkin);
+        booking.setCheckOut(checkout);
+        return bookingRepository.save(booking);
+    }
+
+
     @Override
     public Booking findBookingById(UUID uuid){
         return (Booking) bookingRepository.findBybookingID(uuid).orElseThrow();
@@ -41,6 +58,13 @@ public class BookingServiceImpl implements BookingService{
     public Set<Booking> findAllBookingsOverlap(LocalDate checkin, LocalDate checkout) {
         return bookingRepository.findAll().stream().filter(booking -> isOverlapUsingLocalDateAndDuration(checkin, checkout, booking.getCheckIn(), booking.getCheckOut())).collect(Collectors.toSet());
     }
+
+    @Override
+    public Set<Booking> findAllBookingsOverlap(Room room, LocalDate checkin, LocalDate checkout) {
+
+        return bookingRepository.findAllByRoom(room).stream().filter(booking -> isOverlapUsingLocalDateAndDuration(checkin, checkout, booking.getCheckIn(), booking.getCheckOut())).collect(Collectors.toSet());
+    }
+
 
     /**
      * method from https://www.baeldung.com/java-check-two-date-ranges-overlap

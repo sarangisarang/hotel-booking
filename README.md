@@ -13,4 +13,5 @@ implement the following usecases
 
 
 # Workspace.xml file
-Tracking of local changes to the workspace.xml file can be prevented with the git update-index --assume-unchanged .idea/workspace.xml command
+Tracking of local changes to the workspace.xml file can be prevented with the:
+git update-index --assume-unchanged .idea/workspace.xml command
