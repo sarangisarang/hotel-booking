@@ -1,7 +1,6 @@
 package com.booksys.booking;
 import com.booksys.room.Room;
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
@@ -26,8 +25,8 @@ public class BookingServiceImpl implements BookingService {
     public Booking save(Room room, LocalDate checkin, LocalDate checkout) {
         //validacion
         Set<Booking> rooms = findAllBookingsOverlap(room, checkin, checkout);
-        if (rooms != null && !rooms.isEmpty()) {
-            throw new RuntimeException("This room not avaible");
+        if (rooms != null && !rooms.isEmpty()){
+           throw new RuntimeException("This room not avaible");
         }
         Booking booking = new Booking();
         booking.setRoom(room);
@@ -61,7 +60,6 @@ public class BookingServiceImpl implements BookingService {
 
     @Override
     public Set<Booking> findAllBookingsOverlap(Room room, LocalDate checkin, LocalDate checkout) {
-
         return bookingRepository.findAllByRoom(room).stream().filter(booking -> isOverlapUsingLocalDateAndDuration(checkin, checkout, booking.getCheckIn(), booking.getCheckOut())).collect(Collectors.toSet());
     }
 
