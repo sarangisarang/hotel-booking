@@ -18,11 +18,11 @@ public interface BookingService {
      * @param checkout
      * @return booking
      */
-    Booking save(Room room, LocalDate checkin, LocalDate checkout);
+    Booking save(UUID room, LocalDate checkin, LocalDate checkout);
     Booking findBookingById(UUID id);
     void deleteBooking(UUID id);
     List<Booking> findAll();
     Set<Booking> findAllBookingsBetween(LocalDate checkin, LocalDate checkout);
     Set<Booking> findAllBookingsOverlap(LocalDate checkin, LocalDate checkout);
-    Set<Booking> findAllBookingsOverlap(Room room,LocalDate checkin, LocalDate checkout);
+    Set<Booking> findAllBookingsOverlap(UUID room,LocalDate checkin, LocalDate checkout);
 }

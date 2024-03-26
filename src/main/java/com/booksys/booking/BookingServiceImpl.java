@@ -1,5 +1,7 @@
 package com.booksys.booking;
 import com.booksys.room.Room;
+import com.booksys.room.RoomRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.util.List;
@@ -11,9 +13,12 @@ import java.util.stream.Collectors;
 public class BookingServiceImpl implements BookingService {
 
     private final BookingRepository bookingRepository;
+    private final RoomRepository roomRepository;
 
-    public BookingServiceImpl(BookingRepository bookingRepository) {
+    public BookingServiceImpl(BookingRepository bookingRepository,RoomRepository roomRepository) {
         this.bookingRepository = bookingRepository;
+        this.roomRepository = roomRepository;
+
     }
 
     @Override
@@ -22,20 +27,20 @@ public class BookingServiceImpl implements BookingService {
     }
 
     @Override
-    public Booking save(Room room, LocalDate checkin, LocalDate checkout) {
+    @Transactional
+    public Booking save(UUID room, LocalDate checkin, LocalDate checkout) {
         //validacion
         Set<Booking> rooms = findAllBookingsOverlap(room, checkin, checkout);
         if (rooms != null && !rooms.isEmpty()){
            throw new RuntimeException("This room not avaible");
         }
+        Room newRoom = (Room) roomRepository.findAllByroomID(room).orElseThrow();
         Booking booking = new Booking();
-        booking.setRoom(room);
+        booking.setRoom(newRoom);
         booking.setCheckIn(checkin);
         booking.setCheckOut(checkout);
         return bookingRepository.save(booking);
     }
-
-
     @Override
     public Booking findBookingById(UUID uuid){
         return (Booking) bookingRepository.findBybookingID(uuid).orElseThrow();
@@ -59,8 +64,8 @@ public class BookingServiceImpl implements BookingService {
     }
 
     @Override
-    public Set<Booking> findAllBookingsOverlap(Room room, LocalDate checkin, LocalDate checkout) {
-        return bookingRepository.findAllByRoom(room).stream().filter(booking -> isOverlapUsingLocalDateAndDuration(checkin, checkout, booking.getCheckIn(), booking.getCheckOut())).collect(Collectors.toSet());
+    public Set<Booking> findAllBookingsOverlap(UUID room, LocalDate checkin, LocalDate checkout) {
+        return bookingRepository.findAllByRoomRoomID(room).stream().filter(booking -> isOverlapUsingLocalDateAndDuration(checkin, checkout, booking.getCheckIn(), booking.getCheckOut())).collect(Collectors.toSet());
     }
 
 
