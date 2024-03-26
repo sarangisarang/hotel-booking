@@ -16,8 +16,8 @@ public class BookingController {
     @Autowired
     private BookingService bookingService;
 
-    @PostMapping("/create/{in}/and/{out}")
-    public ResponseEntity<Booking> saveByValidacion(@RequestBody Room room, @PathVariable LocalDate in, @PathVariable LocalDate out) {
+    @PostMapping("/create/{room}/{in}/and/{out}")
+    public ResponseEntity<Booking> saveByValidacion(@PathVariable Room room, @PathVariable LocalDate in, @PathVariable LocalDate out) {
         return new ResponseEntity<>(bookingService.save(room,in,out),HttpStatus.OK);
     }
 
