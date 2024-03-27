@@ -1,5 +1,4 @@
 package com.booksys.booking;
-import com.booksys.room.Room;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +15,7 @@ public class BookingController {
     @Autowired
     private BookingService bookingService;
 
-    @PostMapping("/create/{room}/{in}/and/{out}")
+    @PostMapping("/create/{room}/{in}/and/{out}") //ok
     public ResponseEntity<Booking> saveByValidacion(@PathVariable UUID room, @PathVariable LocalDate in, @PathVariable LocalDate out) {
         return new ResponseEntity<>(bookingService.save(room,in,out),HttpStatus.OK);
     }
