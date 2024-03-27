@@ -5,11 +5,19 @@ implement the following usecases
 - the customer sends a request with checkin date, checkout date and hotel(name or location) to the endpoint.
 - the endpoint replies with the available rooms
 
-# book the available room
+# Hotel
+
+# Booking
+book the available room:
 - the customer selects available rooms and sends a request to endpoint to book it
 - the endpoint replies with status of booking (ok, not ok)
 
+# Room
 
+what is purpose of the room.roomstatus?  
+free: guest are checked out
+occupaid: there are guests checked in
+reserved: ? no idea
 
 
 # Workspace.xml file
