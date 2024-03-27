@@ -7,6 +7,10 @@ implement the following usecases
 
 # Hotel
 
+we need here to implement logic:
+- ToDo -> "guests are checked in"
+- ToDo -> "guests are checked out"
+
 # Booking
 book the available room:
 - the customer selects available rooms and sends a request to endpoint to book it
@@ -17,7 +21,7 @@ book the available room:
 what is purpose of the room.roomstatus?  
 free: guest are checked out
 occupaid: there are guests checked in
-reserved: ? no idea
+reserved: ? no idea <-- LocalDate today(when make booking ) < LocalDate When is checkin
 
 
 # Workspace.xml file
