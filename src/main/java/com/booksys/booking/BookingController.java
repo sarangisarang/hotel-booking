@@ -1,5 +1,4 @@
 package com.booksys.booking;
-import com.booksys.room.Room;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
