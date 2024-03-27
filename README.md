@@ -7,6 +7,10 @@ implement the following usecases
 
 # Hotel
 
+we need here to implement logic:
+- ToDo -> "guests are checked in"
+- ToDo -> "guests are checked out"
+
 # Booking
 book the available room:
 - the customer selects available rooms and sends a request to endpoint to book it
