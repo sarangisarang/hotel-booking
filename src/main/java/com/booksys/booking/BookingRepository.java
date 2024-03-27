@@ -1,4 +1,5 @@
 package com.booksys.booking;
+import com.booksys.room.Room;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.time.LocalDate;
 import java.util.Optional;
@@ -11,4 +12,6 @@ public interface BookingRepository extends JpaRepository<Booking,String> {
     Set<Booking> findByCheckInBetween(LocalDate checkin, LocalDate checkout);
 
     Set<Booking> findAllByRoomRoomID(UUID room);
+
+    Set<Booking> findAllByRoom(Room room);
 }

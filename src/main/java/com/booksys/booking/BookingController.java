@@ -19,6 +19,17 @@ public class BookingController {
     public ResponseEntity<Booking> saveByValidacion(@PathVariable UUID room, @PathVariable LocalDate in, @PathVariable LocalDate out) {
         return new ResponseEntity<>(bookingService.save(room,in,out),HttpStatus.OK);
     }
+
+    /**
+     *
+     * @param roomId
+     * @param newBooking initial data
+     * @return saved booking
+     */
+    @PostMapping("/create/{roomId}")
+    public ResponseEntity<Booking> createBooking(@PathVariable UUID roomId, @RequestBody Booking newBooking) {
+        return new ResponseEntity<>(bookingService.save(roomId,newBooking), HttpStatus.CREATED);
+    }
     @PostMapping("/save")  //ok
     public ResponseEntity<Booking> save(@RequestBody Booking booking){
         return new ResponseEntity<>(bookingService.save(booking), HttpStatus.OK);

@@ -5,7 +5,7 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
 
-public interface RoomRepository extends JpaRepository<Room ,String> {
+public interface RoomRepository extends JpaRepository<Room ,UUID> {
     Optional<Room> findAllByroomID(UUID RoomId);
     Set<Room> findAllByHotel(Hotel hotel);
 }
