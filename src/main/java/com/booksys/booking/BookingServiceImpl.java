@@ -74,14 +74,17 @@ public class BookingServiceImpl implements BookingService {
             throw new RuntimeException("Booking could at leas one day");
         }
         // register today is before checkin change status
-        String fechaI1 = String.valueOf(LocalDate.now());
-        String fechaF2 = String.valueOf(newBooking.getCheckIn());
+        String date1 = String.valueOf(LocalDate.now());
+        String date2 = String.valueOf(newBooking.getCheckIn());
         SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
-        Date fecha1 = formato.parse(fechaI1);
-        Date fecha2 = formato.parse(fechaF2);
-        if(fecha1.before(fecha2)){
+        Date dateValue = formato.parse(date1);
+        Date dateValue2 = formato.parse(date2);
+        if(dateValue.before(dateValue2)){
             room.setRoomStatus(RoomStatus.reserved);
-
+        } else if (dateValue.after(dateValue2)) {
+            room.setRoomStatus(RoomStatus.occupaid);
+        } else if (dateValue2.before(dateValue)) {
+            new RuntimeException("Can not time is behind reserve");
         }
         newBooking.setTotalPrice(room.getRoomType().getPricePerNight().multiply(differenceDays));
         return bookingRepository.save(newBooking);
