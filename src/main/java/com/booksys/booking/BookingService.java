@@ -2,6 +2,7 @@ package com.booksys.booking;
 
 import com.booksys.room.Room;
 
+import java.text.ParseException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
@@ -28,5 +29,5 @@ public interface BookingService {
     Set<Booking> findAllBookingsOverlap(UUID room,LocalDate checkin, LocalDate checkout);
     Set<Booking> findAllBookingsOverlap(Room room, LocalDate checkIn, LocalDate checkOut);
 
-    Booking save(UUID roomId, Booking newBooking);
+    Booking save(UUID roomId, Booking newBooking) throws ParseException;
 }

@@ -1,17 +1,18 @@
 package com.booksys.booking;
 import com.booksys.room.Room;
 import com.booksys.room.RoomRepository;
+import com.booksys.room.RoomStatus;
+import com.sun.source.tree.ContinueTree;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalUnit;
-import java.util.List;
-import java.util.Objects;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -48,7 +49,7 @@ public class BookingServiceImpl implements BookingService {
     }
     @Override
     @Transactional
-    public Booking save(UUID roomId, Booking newBooking) {
+    public Booking save(UUID roomId, Booking newBooking) throws ParseException {
         // attribute validation
         Objects.requireNonNull(roomId);
         Objects.requireNonNull(newBooking);
@@ -71,6 +72,16 @@ public class BookingServiceImpl implements BookingService {
         BigDecimal differenceDays = BigDecimal.valueOf(newBooking.getCheckIn().until(newBooking.getCheckOut(), ChronoUnit.DAYS));
         if(differenceDays.compareTo(BigDecimal.ONE) == -1){
             throw new RuntimeException("Booking could at leas one day");
+        }
+        // register today is before checkin change status
+        String fechaI1 = String.valueOf(LocalDate.now());
+        String fechaF2 = String.valueOf(newBooking.getCheckIn());
+        SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
+        Date fecha1 = formato.parse(fechaI1);
+        Date fecha2 = formato.parse(fechaF2);
+        if(fecha1.before(fecha2)){
+            room.setRoomStatus(RoomStatus.reserved);
+
         }
         newBooking.setTotalPrice(room.getRoomType().getPricePerNight().multiply(differenceDays));
         return bookingRepository.save(newBooking);

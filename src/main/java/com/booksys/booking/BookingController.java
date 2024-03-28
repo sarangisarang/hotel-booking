@@ -3,6 +3,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.text.ParseException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
@@ -28,7 +30,11 @@ public class BookingController {
      */
     @PostMapping("/create/{roomId}")
     public ResponseEntity<Booking> createBooking(@PathVariable UUID roomId, @RequestBody Booking newBooking) {
-        return new ResponseEntity<>(bookingService.save(roomId,newBooking), HttpStatus.CREATED);
+        try {
+            return new ResponseEntity<>(bookingService.save(roomId,newBooking), HttpStatus.CREATED);
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
     }
     @PostMapping("/save")  //ok
     public ResponseEntity<Booking> save(@RequestBody Booking booking){
