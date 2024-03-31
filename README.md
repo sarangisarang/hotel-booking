@@ -27,3 +27,9 @@ reserved: ? no idea <-- LocalDate today(when make booking ) < LocalDate When is 
 # Workspace.xml file
 Tracking of local changes to the workspace.xml file can be prevented with the:
 git update-index --assume-unchanged .idea/workspace.xml command
+
+# Docker Image
+- create docker image. run this command where Dockerfile is located!
+  docker build --tag=hotels-api:latest .
+- run docker image as container. run this command where Dockerfile is located!
+docker run -p8888:8080 hotels-api:latest
