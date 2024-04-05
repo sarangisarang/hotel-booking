@@ -30,6 +30,6 @@ git update-index --assume-unchanged .idea/workspace.xml command
 
 # Docker Image
 - create docker image. run this command where Dockerfile is located!
-  docker build --tag=hotels-api:latest .
+  docker build --tag=hotels-api:latest 
 - run docker image as container. run this command where Dockerfile is located!
 docker run -p8888:8080 hotels-api:latest

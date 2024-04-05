@@ -99,15 +99,18 @@ public class BookingServiceImpl implements BookingService {
     public Booking findBookingById(UUID uuid){
         return (Booking) bookingRepository.findBybookingID(uuid).orElseThrow();
     }
+
     @Override
     public void deleteBooking(UUID id){
         Booking bookingId = (Booking) bookingRepository.findBybookingID(id).orElseThrow();
         bookingRepository.delete(bookingId);
     }
+
     @Override
     public List<Booking> findAll(){
         return bookingRepository.findAll();
     }
+
     @Override
     public Set<Booking> findAllBookingsBetween(LocalDate checkin, LocalDate checkout) {
             return bookingRepository.findByCheckInBetween(checkin, checkout);
