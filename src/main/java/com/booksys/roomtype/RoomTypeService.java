@@ -1,5 +1,4 @@
 package com.booksys.roomtype;
-
 import java.util.List;
 import java.util.UUID;
 

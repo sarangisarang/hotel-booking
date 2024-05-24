@@ -13,24 +13,24 @@ public class RoomTypeController {
     @Autowired
     private RoomTypeService roomTypeService;
 
-    @PostMapping("/save") //ok
+    @PostMapping("/save")
     public ResponseEntity<RoomType>save(@RequestBody RoomType roomType){
         roomTypeService.save(roomType);
         return ResponseEntity.status(HttpStatus.OK).build();
     }
-    @GetMapping("/roomtype/{name}") //ok
+    @GetMapping("/roomtype/{name}")
     public ResponseEntity<List<RoomType>> findByNameRoomType(@PathVariable String name){
         return new ResponseEntity<>(roomTypeService.findByName(name),HttpStatus.OK);
     }
-    @GetMapping("/roomtyps/{id}") //ok
+    @GetMapping("/roomtyps/{id}")
     public ResponseEntity<RoomType> findByIdRoomType(@PathVariable UUID id){
         return new ResponseEntity<>(roomTypeService.findById(id),HttpStatus.OK);
     }
-    @GetMapping("/all") //ok
+    @GetMapping("/all")
     public ResponseEntity<List<RoomType>>findall(){
         return new ResponseEntity<>(roomTypeService.findAll(),HttpStatus.OK);
     }
-    @DeleteMapping("/{id}") //ok
+    @DeleteMapping("/{id}")
     public ResponseEntity<List<RoomType>> deleteByRoomType(@PathVariable UUID id){
         return new ResponseEntity<>(roomTypeService.deleteByid(id),HttpStatus.NO_CONTENT);
     }

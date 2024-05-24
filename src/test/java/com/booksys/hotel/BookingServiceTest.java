@@ -32,4 +32,5 @@ public class BookingServiceTest {
         Set<Booking> allBookingsOverlap = bookingService.findAllBookingsOverlap(checkin, checkout);
         Assertions.assertTrue(allBookingsOverlap.isEmpty());
     }
+    
 }

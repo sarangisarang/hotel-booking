@@ -1,7 +1,5 @@
 package com.booksys.booking;
-
 import com.booksys.room.Room;
-
 import java.text.ParseException;
 import java.time.LocalDate;
 import java.util.List;
