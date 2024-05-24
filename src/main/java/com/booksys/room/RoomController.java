@@ -18,17 +18,17 @@ public class RoomController {
     @Autowired
     private HotelRepository hotelRepository;
 
-    @PostMapping("/save") //ok
+    @PostMapping("/save")
     public ResponseEntity<Room> save(@RequestBody Room room){
         return new ResponseEntity<>(roomService.save(room),HttpStatus.OK);
     }
 
-    @GetMapping("/{id}") //ok
+    @GetMapping("/{id}")
     public ResponseEntity<Room> findRoomById(@PathVariable UUID id){
         return new ResponseEntity<>((Room) roomService.findRoomById(id),HttpStatus.OK);
     }
 
-    @GetMapping("/all") //ok
+    @GetMapping("/all")
     public ResponseEntity<List<Room>> findAllRoom(){
         return new ResponseEntity<>(roomService.findAllByRoom(),HttpStatus.OK);
     }
@@ -39,7 +39,7 @@ public class RoomController {
         return new ResponseEntity<>(roomService.findAvailableRooms(hotel, in, out),HttpStatus.OK);
     }
 
-    @DeleteMapping("/{id}") //ok
+    @DeleteMapping("/{id}")
     public ResponseEntity<Room> deleteRoomById(@PathVariable UUID id){
         roomService.deleteRoom(id);
         return  ResponseEntity.status(HttpStatus.NO_CONTENT).build();

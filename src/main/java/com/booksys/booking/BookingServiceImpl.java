@@ -2,16 +2,13 @@ package com.booksys.booking;
 import com.booksys.room.Room;
 import com.booksys.room.RoomRepository;
 import com.booksys.room.RoomStatus;
-import com.sun.source.tree.ContinueTree;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
-
 import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
-import java.time.temporal.TemporalUnit;
 import java.util.*;
 import java.util.stream.Collectors;
 

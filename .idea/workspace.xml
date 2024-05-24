@@ -5,9 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75d41fcd-92cf-4385-bb52-fdf15e1d0717" name="Changes" comment="Merge remote-tracking branch 'github/develop' into develop">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/booksys/hotel/StaffServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/HotelApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/HotelApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/roomtype/RoomTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/roomtype/RoomTypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/roomtype/RoomTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/roomtype/RoomTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/staff/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/staff/Staff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/booksys/hotel/GuestServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/booksys/hotel/GuestServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/booksys/hotel/HotelServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/booksys/hotel/HotelServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/booksys/hotel/PaymentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/booksys/hotel/PaymentServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/booksys/hotel/RoomServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/booksys/hotel/RoomServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/booksys/hotel/RoomTypeServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/booksys/hotel/RoomTypeServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,29 +72,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HotelApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BookingServiceTest.givenCheckinCheckoutWithOverlap.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BookingServiceTest.givenCheckinCheckoutWithoutOverlap.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/python/dev/hotel&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.34416243&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HotelApplication.executor": "Run",
+    "Docker.Dockerfile.executor": "Run",
+    "JUnit.BookingServiceTest.executor": "Run",
+    "JUnit.BookingServiceTest.givenCheckinCheckoutWithOverlap.executor": "Run",
+    "JUnit.BookingServiceTest.givenCheckinCheckoutWithoutOverlap.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/python/dev/transporter",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.34416243",
+    "settings.editor.selected.configurable": "preferences.JavaFX"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.booksys.booking" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.Dockerfile">
+  <component name="RunManager" selected="Application.HotelApplication">
     <configuration name="HotelApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.booksys.HotelApplication" />
       <module name="hotel" />
@@ -144,8 +158,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Application.HotelApplication" />
+        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="JUnit.BookingServiceTest.givenCheckinCheckoutWithoutOverlap" />
         <item itemvalue="JUnit.BookingServiceTest.givenCheckinCheckoutWithOverlap" />
       </list>
@@ -167,54 +181,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709065921987</updated>
-    </task>
-    <task id="LOCAL-00059" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1710252557681</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1710252557681</updated>
-    </task>
-    <task id="LOCAL-00060" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1710330091157</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1710330091157</updated>
-    </task>
-    <task id="LOCAL-00061" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1710330094916</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1710330094916</updated>
-    </task>
-    <task id="LOCAL-00062" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1710330129781</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1710330129781</updated>
-    </task>
-    <task id="LOCAL-00063" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1710338329633</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1710338329634</updated>
-    </task>
-    <task id="LOCAL-00064" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1710338340451</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1710338340451</updated>
     </task>
     <task id="LOCAL-00065" summary="Merge remote-tracking branch 'github/develop' into develop">
       <option name="closed" value="true" />
@@ -560,7 +526,55 @@
       <option name="project" value="LOCAL" />
       <updated>1711634850530</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1712335031141</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1712335031142</updated>
+    </task>
+    <task id="LOCAL-00109" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1716556087698</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1716556087698</updated>
+    </task>
+    <task id="LOCAL-00110" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1716556090211</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1716556090212</updated>
+    </task>
+    <task id="LOCAL-00111" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1716556094312</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1716556094312</updated>
+    </task>
+    <task id="LOCAL-00112" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1716556099567</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1716556099567</updated>
+    </task>
+    <task id="LOCAL-00113" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1716556139264</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1716556139265</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

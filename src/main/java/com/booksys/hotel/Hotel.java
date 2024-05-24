@@ -7,8 +7,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.sql.Timestamp;
 import java.time.LocalTime;
 import java.util.Set;
 import java.util.UUID;
