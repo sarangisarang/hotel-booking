@@ -30,7 +30,7 @@ public class GuestServiceTest {
         guest.setPhone("4932343232");
         guest.setDatoOfBirth(LocalDate.ofEpochDay(17-11-1985));
         guestRepository.save(guest);
-        Guest newguest = guestRepository.findById(String.valueOf(guestId));
+        Optional<Object> newguest = guestRepository.findByGuestID(guestId);
         Assertions.assertNotNull(newguest);
     }
     @Test
