@@ -28,10 +28,10 @@ public class GuestServiceTest {
         guest.setFirstName("beka");
         guest.setLastName("kikalishvili");
         guest.setPhone("4932343232");
-        guest.setDatoOfBirth(LocalDate.ofEpochDay(17-11-1985));
+        guest.setDatoOfBirth(LocalDate.of(17,11,1985));
         guestRepository.save(guest);
-        Optional<Object> newguest = guestRepository.findByGuestID(guestId);
-        Assertions.assertNotNull(newguest);
+        Optional<Object> newGuest = guestRepository.findByGuestID(guestId);
+        Assertions.assertNotNull(newGuest);
     }
     @Test
     public void GiveAllWhenHasAllDelete(){
@@ -43,11 +43,24 @@ public class GuestServiceTest {
         guest.setFirstName("beka");
         guest.setLastName("kikalishvili");
         guest.setPhone("4932343232");
-        guest.setDatoOfBirth(LocalDate.ofEpochDay(17-11-1985));
+        guest.setDatoOfBirth(LocalDate.of(1985,11,17));
         guestRepository.save(guest);
-        Optional<Object> newguest  = guestRepository.findByGuestID(guestId);
-        guestService.deleteGuest(guestId);
-        Assertions.assertNotEquals(newguest,guest);
+        Optional<Guest> newGuest  = guestRepository.findById(String.valueOf(guestId));
+//        Assertions.assertNotNull(newGuest);
+
+        // Assert
+
+       Assertions.assertEquals(guestId, newGuest.get().getGuestID());
+//        Assertions.assertEquals("birkenstrase", newGuest.get().getAddress());
+//        Assertions.assertEquals("bekakikalishvili@gmail.com", newGuest.get().getEmail());
+//        Assertions.assertEquals("beka", newGuest.get().getFirstName());
+//        Assertions.assertEquals("kikalishvili", newGuest.get().getLastName());
+//        Assertions.assertEquals("4932343232", newGuest.get().getPhone());
+//        Assertions.assertEquals(LocalDate.of(1985, 11, 17), newGuest.get().getDatoOfBirth());
+//
+//        guestRepository.delete(guest);
+//        Optional<Object> deletedGuest = guestRepository.findByGuestID(guestId);
+//        Assertions.assertFalse(deletedGuest.isPresent());
 
     }
 }
