@@ -13,28 +13,28 @@ public class GuestController{
     @Autowired
     private GuestService guestService;
 
-    @PostMapping("/save") //ok
+    @PostMapping("/save")
     public ResponseEntity<Guest>save(@RequestBody Guest guest){
         return new ResponseEntity<>(guestService.save(guest), HttpStatus.OK);
     }
 
-    @DeleteMapping("/{id}") //ok
+    @DeleteMapping("/{id}")
     public ResponseEntity<Guest>deleteGuest(@PathVariable UUID id){
         guestService.deleteGuest(id);
         return  ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
-    @GetMapping("/{id}") //ok
+    @GetMapping("/{id}")
     public ResponseEntity<Guest>findByid(@PathVariable UUID id){
         return new ResponseEntity<>(guestService.findById(id),HttpStatus.OK);
     }
 
-    @GetMapping("/guests/{firstName}") //ok
+    @GetMapping("/guests/{firstName}")
     public ResponseEntity<List<Guest>>findByname(@PathVariable String firstName){
         return new ResponseEntity<>(guestService.findByFirstName(firstName),HttpStatus.OK);
     }
 
-    @GetMapping("/all") //ok
+    @GetMapping("/all")
     public ResponseEntity<List<Guest>> findAll(){
         return new ResponseEntity<>(guestService.findAll(), HttpStatus.OK);
     }

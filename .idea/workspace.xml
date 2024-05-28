@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75d41fcd-92cf-4385-bb52-fdf15e1d0717" name="Changes" comment="Merge remote-tracking branch 'github/develop' into develop">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/guest/GuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/guest/GuestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/booksys/hotel/GuestServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/booksys/hotel/GuestServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,11 +62,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.HotelApplication.executor": "Run",
+    "Application.HotelApplication.executor": "Debug",
     "Docker.Dockerfile.executor": "Run",
     "JUnit.BookingServiceTest.executor": "Run",
     "JUnit.BookingServiceTest.givenCheckinCheckoutWithOverlap.executor": "Run",
     "JUnit.BookingServiceTest.givenCheckinCheckoutWithoutOverlap.executor": "Run",
+    "JUnit.GuestServiceTest.GiveAllWhenHasAllDelete.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -80,7 +84,7 @@
       <recent name="com.booksys.booking" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HotelApplication">
+  <component name="RunManager" selected="JUnit.GuestServiceTest.GiveAllWhenHasAllDelete">
     <configuration name="HotelApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.booksys.HotelApplication" />
       <module name="hotel" />
@@ -126,6 +130,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GuestServiceTest.GiveAllWhenHasAllDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hotel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.booksys.hotel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.booksys.hotel" />
+      <option name="MAIN_CLASS_NAME" value="com.booksys.hotel.GuestServiceTest" />
+      <option name="METHOD_NAME" value="GiveAllWhenHasAllDelete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -143,6 +163,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GuestServiceTest.GiveAllWhenHasAllDelete" />
         <item itemvalue="Application.HotelApplication" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="JUnit.BookingServiceTest.givenCheckinCheckoutWithoutOverlap" />
@@ -166,22 +187,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709065921987</updated>
-    </task>
-    <task id="LOCAL-00068" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1710341116057</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1710341116058</updated>
-    </task>
-    <task id="LOCAL-00069" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1710348638567</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1710348638567</updated>
     </task>
     <task id="LOCAL-00070" summary="Merge remote-tracking branch 'github/develop' into develop">
       <option name="closed" value="true" />
@@ -559,7 +564,23 @@
       <option name="project" value="LOCAL" />
       <updated>1716920296977</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1716920747843</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1716920747843</updated>
+    </task>
+    <task id="LOCAL-00118" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1716920754228</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1716920754228</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -612,6 +633,45 @@
     <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'github/develop' into develop" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/booksys/hotel/GuestServiceTest.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/booksys/hotel/GuestServiceTest.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/booksys/hotel/GuestServiceTest.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/booksys/hotel/GuestServiceTest.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/booksys/hotel/GuestServiceTest.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/booksys/hotel/GuestServiceTest.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/booksys/hotel/GuestServiceTest.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="org.apache.catalina.connector.RequestFacade" memberName="request" />

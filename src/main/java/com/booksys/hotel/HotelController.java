@@ -13,28 +13,28 @@ public class HotelController {
     @Autowired
     private HotelService hotelService;
 
-    @PostMapping("/save") //ok
+    @PostMapping("/save")
     public ResponseEntity<Hotel> save(@RequestBody Hotel hotel) {
         return new ResponseEntity<>(hotelService.save(hotel), HttpStatus.OK);
     }
 
-    @GetMapping("/hotel/{id}")//ok
+    @GetMapping("/hotel/{id}")
     public ResponseEntity<Hotel> findHotelById(@PathVariable UUID id) {
         return new ResponseEntity<>(hotelService.findHotelByhotelID(id), HttpStatus.OK);
     }
 
-    @GetMapping("/hotels/{name}")//ok
+    @GetMapping("/hotels/{name}")
     public ResponseEntity<List<Hotel>> findHotelName(@PathVariable String name) {
         return new  ResponseEntity<>(hotelService.findHotelByName(name), HttpStatus.OK);
     }
 
-    @DeleteMapping("/{id}") //ok
+    @DeleteMapping("/{id}")
     public ResponseEntity<Hotel> deleteHotel(@PathVariable UUID id) {
         hotelService.deleteHotel(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
-    @GetMapping("/all") //ok
+    @GetMapping("/all")
     public ResponseEntity<List<Hotel>> findAll(){
         return new ResponseEntity<>(hotelService.findAll(), HttpStatus.OK);
     }
