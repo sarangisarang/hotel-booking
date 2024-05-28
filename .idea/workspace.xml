@@ -83,7 +83,7 @@
       <recent name="com.booksys.booking" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GuestServiceTest.GiveAllWhenHasAllDelete">
+  <component name="RunManager" selected="JUnit.GuestServiceTest.GiveAllWhenHasALL">
     <configuration name="HotelApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.booksys.HotelApplication" />
       <module name="hotel" />
@@ -162,8 +162,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GuestServiceTest.GiveAllWhenHasAllDelete" />
         <item itemvalue="JUnit.GuestServiceTest.GiveAllWhenHasALL" />
+        <item itemvalue="JUnit.GuestServiceTest.GiveAllWhenHasAllDelete" />
         <item itemvalue="Application.HotelApplication" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="JUnit.BookingServiceTest.givenCheckinCheckoutWithoutOverlap" />
@@ -186,38 +186,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709065921987</updated>
-    </task>
-    <task id="LOCAL-00073" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1710349105487</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1710349105487</updated>
-    </task>
-    <task id="LOCAL-00074" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1710349244401</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1710349244401</updated>
-    </task>
-    <task id="LOCAL-00075" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1710349537928</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1710349537928</updated>
-    </task>
-    <task id="LOCAL-00076" summary="implement findAvailableRooms">
-      <option name="closed" value="true" />
-      <created>1710441963982</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1710441963982</updated>
     </task>
     <task id="LOCAL-00077" summary="Merge remote-tracking branch 'github/develop' into develop">
       <option name="closed" value="true" />
@@ -579,7 +547,39 @@
       <option name="project" value="LOCAL" />
       <updated>1716923675546</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1716924321118</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1716924321118</updated>
+    </task>
+    <task id="LOCAL-00123" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1716924324970</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1716924324970</updated>
+    </task>
+    <task id="LOCAL-00124" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1716924327779</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1716924327779</updated>
+    </task>
+    <task id="LOCAL-00125" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1716924331781</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1716924331781</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
