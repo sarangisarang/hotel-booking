@@ -36,16 +36,17 @@ public class GuestServiceTest {
     @Test
     public void GiveAllWhenHasAllDelete(){
         Guest guest = new Guest();
-        guest.setGuestID(UUID.randomUUID());
+        UUID guestId = UUID.randomUUID();
+        guest.setGuestID(guestId);
         guest.setAddress("birkenstrase");
         guest.setEmail("bekakikalishvili@gmail");
         guest.setFirstName("beka");
         guest.setLastName("kikalishvili");
         guest.setPhone("4932343232");
         guest.setDatoOfBirth(LocalDate.ofEpochDay(17-11-1985));
-        guestService.save(guest);
-        Guest newguest  = guestService.findById(guest.getGuestID());
-        guestService.deleteGuest(newguest.getGuestID());
+        guestRepository.save(guest);
+        Optional<Object> newguest  = guestRepository.findByGuestID(guestId);
+        guestService.deleteGuest(guestId);
         Assertions.assertNotEquals(newguest,guest);
 
     }

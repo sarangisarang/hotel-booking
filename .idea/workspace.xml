@@ -82,7 +82,7 @@
       <recent name="com.booksys.booking" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GuestServiceTest.GiveAllWhenHasALL">
+  <component name="RunManager" selected="JUnit.GuestServiceTest.GiveAllWhenHasAllDelete">
     <configuration name="HotelApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.booksys.HotelApplication" />
       <module name="hotel" />
@@ -161,8 +161,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GuestServiceTest.GiveAllWhenHasALL" />
         <item itemvalue="JUnit.GuestServiceTest.GiveAllWhenHasAllDelete" />
+        <item itemvalue="JUnit.GuestServiceTest.GiveAllWhenHasALL" />
         <item itemvalue="Application.HotelApplication" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="JUnit.BookingServiceTest.givenCheckinCheckoutWithoutOverlap" />
