@@ -16,7 +16,7 @@ public class GuestServiceTest {
     @Test
     public void GiveAllWhenHasALL(){
         Guest guest = new Guest();
-        guest.setGuestID(UUID.fromString("12345"));
+        guest.setGuestID(UUID.randomUUID());
         guest.setAddress("birkenstrase");
         guest.setEmail("bekakikalishvili@gmail");
         guest.setFirstName("beka");
@@ -24,13 +24,13 @@ public class GuestServiceTest {
         guest.setPhone("4932343232");
         guest.setDatoOfBirth(LocalDate.ofEpochDay(17-11-1985));
         guestService.save(guest);
-        Guest newguest  = guestService.findById(UUID.fromString("12345"));
+        Guest newguest  = guestService.findById(guest.getGuestID());
         Assertions.assertNotNull(newguest);
     }
     @Test
     public void GiveAllWhenHasAllDelete(){
         Guest guest = new Guest();
-  //      guest.setGuestID(UUID.fromString("12345"));
+        guest.setGuestID(UUID.randomUUID());
         guest.setAddress("birkenstrase");
         guest.setEmail("bekakikalishvili@gmail");
         guest.setFirstName("beka");
@@ -38,7 +38,7 @@ public class GuestServiceTest {
         guest.setPhone("4932343232");
         guest.setDatoOfBirth(LocalDate.ofEpochDay(17-11-1985));
         guestService.save(guest);
-        Guest newguest  = guestService.findById(UUID.fromString("12345"));
+        Guest newguest  = guestService.findById(guest.getGuestID());
         guestService.deleteGuest(newguest.getGuestID());
         Assertions.assertNotEquals(newguest,guest);
 
