@@ -1,6 +1,7 @@
 package com.booksys.hotel;
 import com.booksys.guest.Guest;
 import com.booksys.guest.GuestService;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -23,6 +24,9 @@ public class GuestServiceTest {
         guest.setFirstName("kikalishvili");
         guest.setPhone("4932343232");
         guest.setDatoOfBirth(LocalDate.ofEpochDay(17-11-1985));
+        guestService.save(guest);
+        Guest newguest  = guestService.findById(UUID.fromString("12345"));
+        Assertions.assertNotNull(newguest);
 
     }
 
