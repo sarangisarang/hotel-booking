@@ -28,10 +28,10 @@ public class GuestServiceTest {
         guest.setFirstName("beka");
         guest.setLastName("kikalishvili");
         guest.setPhone("4932343232");
-        guest.setDatoOfBirth(LocalDate.ofEpochDay(17-11-1985));
+        guest.setDatoOfBirth(LocalDate.of(17,11,1985));
         guestRepository.save(guest);
-        Optional<Object> newguest = guestRepository.findByGuestID(guestId);
-        Assertions.assertNotNull(newguest);
+        Optional<Object> newGuest = guestRepository.findByGuestID(guestId);
+        Assertions.assertNotNull(newGuest);
     }
     @Test
     public void GiveAllWhenHasAllDelete(){
@@ -43,11 +43,12 @@ public class GuestServiceTest {
         guest.setFirstName("beka");
         guest.setLastName("kikalishvili");
         guest.setPhone("4932343232");
-        guest.setDatoOfBirth(LocalDate.ofEpochDay(17-11-1985));
+        guest.setDatoOfBirth(LocalDate.of(1985,11,17));
         guestRepository.save(guest);
-        Optional<Object> newguest  = guestRepository.findByGuestID(guestId);
-        guestService.deleteGuest(guestId);
-        Assertions.assertNotEquals(newguest,guest);
+
+        Optional<Object> newGuest  = guestRepository.findByGuestID(guestId);
+        guestService.deleteGuest();
+        Assertions.assertNotNull(newGuest);
 
     }
 }
