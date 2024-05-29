@@ -50,7 +50,7 @@ public class GuestServiceTest {
 
         // Assert
 
-       Assertions.assertEquals(guestId, newGuest.get().getGuestID());
+         Assertions.assertEquals(guestId, newGuest.get().getGuestID());
 //        Assertions.assertEquals("birkenstrase", newGuest.get().getAddress());
 //        Assertions.assertEquals("bekakikalishvili@gmail.com", newGuest.get().getEmail());
 //        Assertions.assertEquals("beka", newGuest.get().getFirstName());
