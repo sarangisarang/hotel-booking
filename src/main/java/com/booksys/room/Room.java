@@ -1,29 +1,32 @@
 package com.booksys.room;
-import com.booksys.hotel.Hotel;
+
 import com.booksys.roomtype.RoomType;
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import java.util.UUID;
 
-@Setter
-@Getter
+/**
+ * Entity representing a Room in the hotel.
+ */
 @Entity
+@Table(name = "rooms")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Room {
+
     @Id
     @GeneratedValue
-    private UUID roomID;
+    private UUID id;
 
-    @JsonBackReference
-    @ManyToOne
-    @JoinColumn(name = "hotel_id")
-    private Hotel hotel;
+    private String roomNumber;
+
+    private boolean available;
+
+    private double pricePerNight;
 
     @ManyToOne
-    @JoinColumn(name = "type_id")
+    @JoinColumn(name = "room_type_id")
     private RoomType roomType;
-
-    @Enumerated(EnumType.STRING)
-    private RoomStatus roomStatus;
 }

@@ -1,17 +1,31 @@
 package com.booksys.booking;
-import com.booksys.room.Room;
+
 import org.springframework.data.jpa.repository.JpaRepository;
-import java.time.LocalDate;
-import java.util.Optional;
-import java.util.Set;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
 import java.util.UUID;
 
-public interface BookingRepository extends JpaRepository<Booking,String> {
-    Optional<Object> findBybookingID(UUID uuid);
+/**
+ * Repository interface for accessing Booking entities from the database.
+ * Uses Spring Data JPA to provide CRUD operations and custom queries.
+ */
+@Repository
+public interface BookingRepository extends JpaRepository<Booking, UUID> {
 
-    Set<Booking> findByCheckInBetween(LocalDate checkin, LocalDate checkout);
+    /**
+     * Find all bookings by a specific guest's ID.
+     *
+     * @param guestId UUID of the guest.
+     * @return list of bookings made by the guest.
+     */
+    List<Booking> findByGuestId(UUID guestId);
 
-    Set<Booking> findAllByRoomRoomID(UUID room);
-
-    Set<Booking> findAllByRoom(Room room);
+    /**
+     * Find all bookings for a specific room.
+     *
+     * @param roomId UUID of the room.
+     * @return list of bookings associated with the room.
+     */
+    List<Booking> findByRoomId(UUID roomId);
 }

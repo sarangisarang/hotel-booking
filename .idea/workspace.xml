@@ -4,9 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75d41fcd-92cf-4385-bb52-fdf15e1d0717" name="Changes" comment="Merge remote-tracking branch 'github/develop' into develop">
+    <list default="true" id="75d41fcd-92cf-4385-bb52-fdf15e1d0717" name="Changes" comment="Merge remote-tracking branch 'github/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/test/java/com/booksys/hotel/GuestServiceTest.java">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booksys/guest/GuestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booksys/guest/GuestNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/booksys/hotel/GuestServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/booksys/hotel/GuestServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/booking/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/booking/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/booking/BookingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/guest/Guest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/guest/Guest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/guest/GuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/guest/GuestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/guest/GuestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/guest/GuestRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/guest/GuestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/guest/GuestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/guest/GuestServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/guest/GuestServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/room/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/room/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/room/RoomStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/roomtype/RoomType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/roomtype/RoomType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/roomtype/RoomTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/roomtype/RoomTypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/roomtype/RoomTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/roomtype/RoomTypeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/roomtype/RoomTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/roomtype/RoomTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/roomtype/RoomTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/roomtype/RoomTypeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/guest/guest.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/guest/guest.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/guest/guest.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/guest/guest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/guest/guest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/guest/guest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/hotel/hotel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/hotel/hotel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/booksys/hotel/BookingServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/booksys/hotel/GuestServiceTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +53,7 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -30,6 +66,12 @@
       </list>
     </option>
     <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -47,11 +89,14 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2cxvD6BrDmVqLzj8CJG8oz46Lzj" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -60,30 +105,58 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.HotelApplication.executor": "Debug",
+    "Application.HotelApplication.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
     "Docker.Dockerfile.executor": "Run",
     "JUnit.BookingServiceTest.executor": "Run",
     "JUnit.BookingServiceTest.givenCheckinCheckoutWithOverlap.executor": "Run",
     "JUnit.BookingServiceTest.givenCheckinCheckoutWithoutOverlap.executor": "Run",
     "JUnit.GuestServiceTest.GiveAllWhenHasALL.executor": "Run",
     "JUnit.GuestServiceTest.GiveAllWhenHasAllDelete.executor": "Run",
+    "JUnit.GuestServiceTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "didalgo.chatgpt.ToolWindow.ACTIVE": "GPT_4",
+    "git-widget-placeholder": "develop",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/python/dev/hotel",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.34416243",
-    "settings.editor.selected.configurable": "preferences.JavaFX"
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "HTML"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.booksys.guest" />
+      <recent name="com.booksys.room" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/staff" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/room" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/guest" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/booking" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/hotel" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/staff" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/hotel" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/guest" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/booking" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static" />
+    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.booksys.booking" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GuestServiceTest.GiveAllWhenHasAllDelete">
+  <component name="RunManager" selected="Application.HotelApplication">
     <configuration name="HotelApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.booksys.HotelApplication" />
       <module name="hotel" />
@@ -97,7 +170,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookingServiceTest.givenCheckinCheckoutWithoutOverlap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GuestServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hotel" />
       <extension name="coverage">
         <pattern>
@@ -106,9 +179,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.booksys.hotel" />
-      <option name="MAIN_CLASS_NAME" value="com.booksys.hotel.BookingServiceTest" />
-      <option name="METHOD_NAME" value="givenCheckinCheckoutWithoutOverlap" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.booksys.hotel.GuestServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -162,21 +234,13 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GuestServiceTest.GiveAllWhenHasAllDelete" />
-        <item itemvalue="JUnit.GuestServiceTest.GiveAllWhenHasALL" />
         <item itemvalue="Application.HotelApplication" />
         <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="JUnit.BookingServiceTest.givenCheckinCheckoutWithoutOverlap" />
+        <item itemvalue="JUnit.GuestServiceTest" />
+        <item itemvalue="JUnit.GuestServiceTest.GiveAllWhenHasAllDelete" />
+        <item itemvalue="JUnit.GuestServiceTest.GiveAllWhenHasALL" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-f00315f9" />
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-78a6f59c" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -186,70 +250,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709065921987</updated>
-    </task>
-    <task id="LOCAL-00082" summary="payment ist ok!!">
-      <option name="closed" value="true" />
-      <created>1710508824452</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1710508824452</updated>
-    </task>
-    <task id="LOCAL-00083" summary="payment ist ok!!">
-      <option name="closed" value="true" />
-      <created>1710510504985</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1710510504985</updated>
-    </task>
-    <task id="LOCAL-00084" summary="payment ist ok!!">
-      <option name="closed" value="true" />
-      <created>1710511869170</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1710511869170</updated>
-    </task>
-    <task id="LOCAL-00085" summary="payment ist ok!!">
-      <option name="closed" value="true" />
-      <created>1710511872584</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1710511872584</updated>
-    </task>
-    <task id="LOCAL-00086" summary="staff ist ok!">
-      <option name="closed" value="true" />
-      <created>1710522298146</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1710522298146</updated>
-    </task>
-    <task id="LOCAL-00087" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1710612123748</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1710612123749</updated>
-    </task>
-    <task id="LOCAL-00088" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1710931400189</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1710931400190</updated>
-    </task>
-    <task id="LOCAL-00089" summary="Merge remote-tracking branch 'github/develop' into develop">
-      <option name="closed" value="true" />
-      <created>1710932785880</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1710932785880</updated>
     </task>
     <task id="LOCAL-00090" summary="Merge remote-tracking branch 'github/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/com/booksys/booking/BookingController.java">
       <option name="closed" value="true" />
@@ -579,7 +579,71 @@
       <option name="project" value="LOCAL" />
       <updated>1716928442516</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary="Merge remote-tracking branch 'github/develop' into develop">
+      <option name="closed" value="true" />
+      <created>1717002923156</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1717002923157</updated>
+    </task>
+    <task id="LOCAL-00132" summary="Merge remote-tracking branch 'github/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/test/java/com/booksys/hotel/GuestServiceTest.java">
+      <option name="closed" value="true" />
+      <created>1717002936954</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1717002936954</updated>
+    </task>
+    <task id="LOCAL-00133" summary="Merge remote-tracking branch 'github/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/test/java/com/booksys/hotel/GuestServiceTest.java">
+      <option name="closed" value="true" />
+      <created>1717002944476</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1717002944476</updated>
+    </task>
+    <task id="LOCAL-00134" summary="Merge remote-tracking branch 'github/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/test/java/com/booksys/hotel/GuestServiceTest.java">
+      <option name="closed" value="true" />
+      <created>1717002949988</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1717002949988</updated>
+    </task>
+    <task id="LOCAL-00135" summary="Merge remote-tracking branch 'github/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/test/java/com/booksys/hotel/GuestServiceTest.java">
+      <option name="closed" value="true" />
+      <created>1749845250366</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1749845250366</updated>
+    </task>
+    <task id="LOCAL-00136" summary="Merge remote-tracking branch 'github/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/test/java/com/booksys/hotel/GuestServiceTest.java">
+      <option name="closed" value="true" />
+      <created>1749845259377</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1749845259377</updated>
+    </task>
+    <task id="LOCAL-00137" summary="Merge remote-tracking branch 'github/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/test/java/com/booksys/hotel/GuestServiceTest.java">
+      <option name="closed" value="true" />
+      <created>1749845273770</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1749845273770</updated>
+    </task>
+    <task id="LOCAL-00138" summary="Merge remote-tracking branch 'github/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/test/java/com/booksys/hotel/GuestServiceTest.java">
+      <option name="closed" value="true" />
+      <created>1749845412561</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1749845412561</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -629,7 +693,8 @@
     <MESSAGE value="Merge remote-tracking branch 'github/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="describe here some business ligic README.md" />
     <MESSAGE value="Merge remote-tracking branch 'github/develop' into develop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'github/develop' into develop" />
+    <MESSAGE value="Merge remote-tracking branch 'github/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/test/java/com/booksys/hotel/GuestServiceTest.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'github/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/test/java/com/booksys/hotel/GuestServiceTest.java" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
@@ -637,5 +702,10 @@
         <PinnedItemInfo parentTag="org.apache.catalina.connector.RequestFacade" memberName="request" />
       </pinned-members>
     </pin-to-top-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/hotel$GuestServiceTest_GiveAllWhenHasAllDelete.ic" NAME="GuestServiceTest.GiveAllWhenHasAllDelete Coverage Results" MODIFIED="1717006646888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.booksys.hotel.*</FILTER>
+    </SUITE>
   </component>
 </project>

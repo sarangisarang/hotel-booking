@@ -1,47 +1,43 @@
 package com.booksys.room;
-import com.booksys.hotel.Hotel;
-import com.booksys.hotel.HotelRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.time.LocalDate;
+
 import java.util.List;
-import java.util.Set;
 import java.util.UUID;
 
+/**
+ * REST Controller for managing Rooms.
+ */
 @RestController
-@RequestMapping("/booksys/room")
+@RequestMapping("/api/booksys/rooms")
+@RequiredArgsConstructor
 public class RoomController {
-    @Autowired
-    private RoomService roomService;
-    @Autowired
-    private HotelRepository hotelRepository;
+
+    private final RoomService roomService;
 
     @PostMapping("/save")
-    public ResponseEntity<Room> save(@RequestBody Room room){
-        return new ResponseEntity<>(roomService.save(room),HttpStatus.OK);
+    public ResponseEntity<Room> save(@RequestBody Room room) {
+        return ResponseEntity.ok(roomService.createRoom(room));
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Room>> getAll() {
+        return ResponseEntity.ok(roomService.getAllRooms());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Room> findRoomById(@PathVariable UUID id){
-        return new ResponseEntity<>((Room) roomService.findRoomById(id),HttpStatus.OK);
-    }
-
-    @GetMapping("/all")
-    public ResponseEntity<List<Room>> findAllRoom(){
-        return new ResponseEntity<>(roomService.findAllByRoom(),HttpStatus.OK);
-    }
-
-    @GetMapping("/{hotelID}/available/between/{in}/and/{out}") //need to talk about this.
-    public ResponseEntity<Set<Room>> findAvailableRooms(@PathVariable String hotelID, @PathVariable LocalDate in, @PathVariable LocalDate out){
-        Hotel hotel = hotelRepository.findById(UUID.fromString(hotelID)).orElseThrow(() -> new RuntimeException("Hotel not found"));
-        return new ResponseEntity<>(roomService.findAvailableRooms(hotel, in, out),HttpStatus.OK);
+    public ResponseEntity<Room> getById(@PathVariable UUID id) {
+        return ResponseEntity.ok(roomService.getRoomById(id));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Room> deleteRoomById(@PathVariable UUID id){
+    public ResponseEntity<Void> delete(@PathVariable UUID id) {
         roomService.deleteRoom(id);
-        return  ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+        return ResponseEntity.noContent().build();
     }
 }
+
+
+

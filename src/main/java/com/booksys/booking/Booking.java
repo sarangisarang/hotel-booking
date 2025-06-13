@@ -1,30 +1,37 @@
 package com.booksys.booking;
-import com.booksys.guest.Guest;
-import com.booksys.room.Room;
+
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-import java.math.BigDecimal;
+import lombok.*;
 import java.time.LocalDate;
 import java.util.UUID;
 
-@Setter
-@Getter
+/**
+ * Entity representing a booking in the hotel system.
+ */
 @Entity
+@Table(name = "bookings")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Booking {
+
     @Id
-    @GeneratedValue
-    private UUID bookingID;
-    private LocalDate checkIn;
-    private LocalDate checkOut;
-    private BigDecimal totalPrice;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private UUID id;
 
-    @ManyToOne
-    @JoinColumn(name = "guest_ID")
-    private Guest guest;
+    @Column(nullable = false)
+    private UUID guestId;
 
-    @ManyToOne
-    @JoinColumn(name= "room_ID")
-    private Room room;
+    @Column(nullable = false)
+    private UUID roomId;
 
+    @Column(nullable = false)
+    private LocalDate checkInDate;
+
+    @Column(nullable = false)
+    private LocalDate checkOutDate;
+
+    @Column(nullable = false)
+    private String status; // e.g., "CONFIRMED", "CANCELLED", "COMPLETED"
 }

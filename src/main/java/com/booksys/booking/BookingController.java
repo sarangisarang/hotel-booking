@@ -1,63 +1,91 @@
 package com.booksys.booking;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.text.ParseException;
-import java.time.LocalDate;
+
 import java.util.List;
-import java.util.Set;
 import java.util.UUID;
 
+/**
+ * BookingController handles all incoming HTTP requests related to bookings.
+ * It provides endpoints to create, retrieve, and delete bookings.
+ */
 @RestController
-@RequestMapping("/booksys/booking")
+@RequestMapping("/api/bookings")
+@CrossOrigin(origins = "*")
 public class BookingController {
 
-    @Autowired
-    private BookingService bookingService;
+    private final BookingService bookingService;
 
-    @PostMapping("/create/{room}/{in}/and/{out}") //ok
-    public ResponseEntity<Booking> saveByValidacion(@PathVariable UUID room, @PathVariable LocalDate in, @PathVariable LocalDate out) {
-        return new ResponseEntity<>(bookingService.save(room,in,out),HttpStatus.OK);
+    /**
+     * Constructor-based injection of BookingService.
+     *
+     * @param bookingService service layer for booking operations.
+     */
+    public BookingController(BookingService bookingService) {
+        this.bookingService = bookingService;
     }
 
     /**
+     * GET /api/bookings
+     * Retrieves a list of all bookings.
      *
-     * @param roomId
-     * @param newBooking initial data
-     * @return saved booking
+     * @return list of all bookings.
      */
-    @PostMapping("/create/{roomId}")
-    public ResponseEntity<Booking> createBooking(@PathVariable UUID roomId, @RequestBody Booking newBooking) {
-        try {
-            return new ResponseEntity<>(bookingService.save(roomId,newBooking), HttpStatus.CREATED);
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
-        }
+    @GetMapping
+    public List<Booking> getAllBookings() {
+        return bookingService.findAll();
     }
-    @PostMapping("/save")  //ok
-    public ResponseEntity<Booking> save(@RequestBody Booking booking){
-        return new ResponseEntity<>(bookingService.save(booking), HttpStatus.OK);
+
+    /**
+     * GET /api/bookings/{id}
+     * Retrieves a booking by its unique ID.
+     *
+     * @param id UUID of the booking.
+     * @return the booking if found.
+     */
+    @GetMapping("/{id}")
+    public ResponseEntity<Booking> getBookingById(@PathVariable UUID id) {
+        Booking booking = bookingService.findById(id);
+        return ResponseEntity.ok(booking);
     }
-    @GetMapping("bookings/{id}") //ok
-    public ResponseEntity<Booking>findBookingId(@PathVariable UUID id){
-        return new ResponseEntity<>(bookingService.findBookingById(id),HttpStatus.OK);
+
+    /**
+     * GET /api/bookings/guest/{guestId}
+     * Retrieves bookings associated with a specific guest ID.
+     *
+     * @param guestId UUID of the guest.
+     * @return list of bookings for the guest.
+     */
+    @GetMapping("/guest/{guestId}")
+    public List<Booking> getBookingsByGuestId(@PathVariable UUID guestId) {
+        return bookingService.findByGuestId(guestId);
     }
-    @DeleteMapping("/{id}") //ok
-    public ResponseEntity<Booking> deleteBookingById(@PathVariable UUID id){
+
+    /**
+     * POST /api/bookings
+     * Creates a new booking record.
+     *
+     * @param booking Booking object from request body.
+     * @return the created booking.
+     */
+    @PostMapping
+    public ResponseEntity<Booking> createBooking(@RequestBody Booking booking) {
+        Booking created = bookingService.save(booking);
+        return new ResponseEntity<>(created, HttpStatus.CREATED);
+    }
+
+    /**
+     * DELETE /api/bookings/{id}
+     * Deletes a booking by its ID.
+     *
+     * @param id UUID of the booking.
+     * @return 204 No Content status if successful.
+     */
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteBooking(@PathVariable UUID id) {
         bookingService.deleteBooking(id);
-        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+        return ResponseEntity.noContent().build();
     }
-   @GetMapping("/all") //ok
-   public ResponseEntity<List<Booking>> showAll(){
-       return new ResponseEntity<>(bookingService.findAll(),HttpStatus.OK);
-   }
-   @GetMapping("/between/{in}/and/{out}") //ok
-   public ResponseEntity<Set<Booking>> allBetween(@PathVariable LocalDate in, @PathVariable LocalDate out){
-       return new ResponseEntity<>(bookingService.findAllBookingsBetween(in, out),HttpStatus.OK);
-   }
-   @GetMapping("/overlap/{in}/and/{out}") //ok
-   public ResponseEntity<Set<Booking>> allOverlap(@PathVariable LocalDate in,@PathVariable LocalDate out){
-        return new ResponseEntity<>(bookingService.findAllBookingsOverlap(in,out),HttpStatus.OK);
-   }
 }

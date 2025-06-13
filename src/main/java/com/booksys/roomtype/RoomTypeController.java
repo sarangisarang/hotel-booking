@@ -1,37 +1,40 @@
 package com.booksys.roomtype;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * REST Controller for Room Type management.
+ */
 @RestController
-@RequestMapping("/booksys/roomtype")
+@RequestMapping("/api/booksys/roomtypes")
+@RequiredArgsConstructor
 public class RoomTypeController {
 
-    @Autowired
-    private RoomTypeService roomTypeService;
+    private final RoomTypeService roomTypeService;
 
     @PostMapping("/save")
-    public ResponseEntity<RoomType>save(@RequestBody RoomType roomType){
-        roomTypeService.save(roomType);
-        return ResponseEntity.status(HttpStatus.OK).build();
+    public ResponseEntity<RoomType> save(@RequestBody RoomType roomType) {
+        return ResponseEntity.ok(roomTypeService.create(roomType));
     }
-    @GetMapping("/roomtype/{name}")
-    public ResponseEntity<List<RoomType>> findByNameRoomType(@PathVariable String name){
-        return new ResponseEntity<>(roomTypeService.findByName(name),HttpStatus.OK);
+
+    @GetMapping
+    public ResponseEntity<List<RoomType>> getAll() {
+        return ResponseEntity.ok(roomTypeService.getAll());
     }
-    @GetMapping("/roomtyps/{id}")
-    public ResponseEntity<RoomType> findByIdRoomType(@PathVariable UUID id){
-        return new ResponseEntity<>(roomTypeService.findById(id),HttpStatus.OK);
+
+    @GetMapping("/{id}")
+    public ResponseEntity<RoomType> getById(@PathVariable UUID id) {
+        return ResponseEntity.ok(roomTypeService.getById(id));
     }
-    @GetMapping("/all")
-    public ResponseEntity<List<RoomType>>findall(){
-        return new ResponseEntity<>(roomTypeService.findAll(),HttpStatus.OK);
-    }
+
     @DeleteMapping("/{id}")
-    public ResponseEntity<List<RoomType>> deleteByRoomType(@PathVariable UUID id){
-        return new ResponseEntity<>(roomTypeService.deleteByid(id),HttpStatus.NO_CONTENT);
+    public ResponseEntity<Void> delete(@PathVariable UUID id) {
+        roomTypeService.delete(id);
+        return ResponseEntity.noContent().build();
     }
 }

@@ -1,11 +1,14 @@
 package com.booksys.roomtype;
+
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * Service interface for managing Room Types.
+ */
 public interface RoomTypeService {
-    void save(RoomType roomType);
-    List<RoomType> findByName(String name);
-    RoomType findById(UUID id);
-    List<RoomType> deleteByid(UUID id);
-    List<RoomType> findAll();
+    RoomType create(RoomType roomType);
+    List<RoomType> getAll();
+    RoomType getById(UUID id);
+    void delete(UUID id);
 }

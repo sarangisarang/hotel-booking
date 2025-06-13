@@ -1,42 +1,43 @@
 package com.booksys.hotel;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * REST controller for managing hotels.
+ */
 @RestController
-@RequestMapping("/booksys/hotel")
+@RequestMapping("/api/booksys/hotels")
+@RequiredArgsConstructor
 public class HotelController {
 
-    @Autowired
-    private HotelService hotelService;
+    private final HotelService hotelService;
 
     @PostMapping("/save")
     public ResponseEntity<Hotel> save(@RequestBody Hotel hotel) {
-        return new ResponseEntity<>(hotelService.save(hotel), HttpStatus.OK);
+        return ResponseEntity.ok(hotelService.create(hotel));
     }
 
-    @GetMapping("/hotel/{id}")
-    public ResponseEntity<Hotel> findHotelById(@PathVariable UUID id) {
-        return new ResponseEntity<>(hotelService.findHotelByhotelID(id), HttpStatus.OK);
+    @GetMapping
+    public ResponseEntity<List<Hotel>> getAll() {
+        return ResponseEntity.ok(hotelService.getAll());
     }
 
-    @GetMapping("/hotels/{name}")
-    public ResponseEntity<List<Hotel>> findHotelName(@PathVariable String name) {
-        return new  ResponseEntity<>(hotelService.findHotelByName(name), HttpStatus.OK);
+    @GetMapping("/{id}")
+    public ResponseEntity<Hotel> getById(@PathVariable UUID id) {
+        return ResponseEntity.ok(hotelService.getById(id));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Hotel> deleteHotel(@PathVariable UUID id) {
-        hotelService.deleteHotel(id);
-        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
-    }
-
-    @GetMapping("/all")
-    public ResponseEntity<List<Hotel>> findAll(){
-        return new ResponseEntity<>(hotelService.findAll(), HttpStatus.OK);
+    public ResponseEntity<Void> delete(@PathVariable UUID id) {
+        hotelService.delete(id);
+        return ResponseEntity.noContent().build();
     }
 }
+
+
 

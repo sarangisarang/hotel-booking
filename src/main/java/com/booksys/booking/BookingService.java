@@ -1,31 +1,48 @@
 package com.booksys.booking;
-import com.booksys.room.Room;
-import java.text.ParseException;
-import java.time.LocalDate;
+
 import java.util.List;
-import java.util.Set;
 import java.util.UUID;
 
+/**
+ * BookingService defines the business logic operations related to bookings.
+ */
 public interface BookingService {
+
+    /**
+     * Save a new booking.
+     *
+     * @param booking Booking object to be saved.
+     * @return the saved booking.
+     */
     Booking save(Booking booking);
 
     /**
-     * Create booking with given Room,checkin and checkout.
-     * but first validate that the room is available in this period
+     * Delete a booking by ID.
      *
-     * @param room
-     * @param checkin
-     * @param checkout
-     * @return booking
+     * @param id UUID of the booking to delete.
      */
-    Booking save(UUID room, LocalDate checkin, LocalDate checkout);
-    Booking findBookingById(UUID id);
     void deleteBooking(UUID id);
-    List<Booking> findAll();
-    Set<Booking> findAllBookingsBetween(LocalDate checkin, LocalDate checkout);
-    Set<Booking> findAllBookingsOverlap(LocalDate checkin, LocalDate checkout);
-    Set<Booking> findAllBookingsOverlap(UUID room,LocalDate checkin, LocalDate checkout);
-    Set<Booking> findAllBookingsOverlap(Room room, LocalDate checkIn, LocalDate checkOut);
 
-    Booking save(UUID roomId, Booking newBooking) throws ParseException;
+    /**
+     * Find a booking by its ID.
+     *
+     * @param id UUID of the booking.
+     * @return the booking object if found.
+     */
+    Booking findById(UUID id);
+
+    /**
+     * Find all bookings by a specific guest.
+     *
+     * @param guestId UUID of the guest.
+     * @return list of bookings.
+     */
+    List<Booking> findByGuestId(UUID guestId);
+
+    /**
+     * Find all bookings.
+     *
+     * @return list of all bookings.
+     */
+    List<Booking> findAll();
 }

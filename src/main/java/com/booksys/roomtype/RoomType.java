@@ -1,21 +1,27 @@
 package com.booksys.roomtype;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import lombok.Getter;
-import lombok.Setter;
-import java.math.BigDecimal;
+
+import jakarta.persistence.*;
+import lombok.*;
+
 import java.util.UUID;
 
-@Setter
-@Getter
+/**
+ * Entity representing a type/category of Room (e.g., Single, Double, Suite).
+ */
 @Entity
+@Table(name = "room_types")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class RoomType {
+
     @Id
     @GeneratedValue
-    private UUID typeId;
+    private UUID id;
+
+    @Column(nullable = false, unique = true)
     private String name;
+
     private String description;
-    private BigDecimal pricePerNight;
-    private int capacity;
 }
