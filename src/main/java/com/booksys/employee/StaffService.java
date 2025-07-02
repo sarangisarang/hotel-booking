@@ -1,4 +1,4 @@
-package com.booksys.staff;
+package com.booksys.employee;
 import java.util.List;
 import java.util.UUID;
 

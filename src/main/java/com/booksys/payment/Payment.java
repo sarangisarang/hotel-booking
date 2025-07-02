@@ -1,24 +1,38 @@
 package com.booksys.payment;
+
 import com.booksys.booking.Booking;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
-@Setter
-@Getter
 @Entity
+@Table(name = "payments")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Payment {
+
     @Id
     @GeneratedValue
-    private UUID paymentID;
-    private BigDecimal amount;
-    private LocalDate paymentDate;
-    private String paymentMethod;
+    private UUID id;
 
-    @ManyToOne
+    @Column(nullable = false)
+    private BigDecimal amount;
+
+    @Column(nullable = false)
+    private String paymentMethod; // e.g., "CREDIT_CARD", "CASH", "ONLINE"
+
+    @Column(nullable = false)
+    private LocalDateTime paymentDate;
+
+    @Enumerated(EnumType.STRING)
+    private PaymentStatus status; // e.g., "PAID", "PENDING", "FAILED"
+
+    @OneToOne
     @JoinColumn(name = "booking_id")
     private Booking booking;
 }

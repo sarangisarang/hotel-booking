@@ -11,8 +11,9 @@ import java.util.UUID;
  * REST controller for managing hotels.
  */
 @RestController
-@RequestMapping("/api/booksys/hotels")
+@RequestMapping("/api/books/hotels")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*")
 public class HotelController {
 
     private final HotelService hotelService;

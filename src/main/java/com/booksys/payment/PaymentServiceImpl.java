@@ -1,35 +1,56 @@
 package com.booksys.payment;
+
+import com.booksys.payment.dto.PaymentRequestDTO;
+import com.booksys.payment.dto.PaymentResponseDTO;
+import com.booksys.payment.mapper.PaymentMapper;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
+/**
+ * Service implementation for managing payments.
+ */
 @Service
-public class PaymentServiceImpl implements PaymentService{
+@RequiredArgsConstructor
+public class PaymentServiceImpl implements PaymentService {
 
     private final PaymentRepository paymentRepository;
 
-    public PaymentServiceImpl(PaymentRepository paymentRepository) {
-        this.paymentRepository = paymentRepository;
+    @Override
+    public List<PaymentResponseDTO> getAllPayments() {
+        return paymentRepository.findAll()
+                .stream()
+                .map(PaymentMapper::toDTO)
+                .collect(Collectors.toList());
     }
 
     @Override
-    public Payment save(Payment payment) {
-        return paymentRepository.save(payment);
+    public PaymentResponseDTO savePayment(PaymentRequestDTO requestDTO) {
+        Payment payment = PaymentMapper.toEntity(requestDTO);
+        Payment saved = paymentRepository.save(payment);
+        return PaymentMapper.toDTO(saved);
     }
 
     @Override
-    public void deletePaymentById(UUID payimentId) {
-       Payment payment = (Payment) paymentRepository.findByPaymentID(payimentId).orElseThrow();
-       paymentRepository.delete(payment);
+    public PaymentResponseDTO getPaymentById(UUID id) {
+        return paymentRepository.findById(id)
+                .map(PaymentMapper::toDTO)
+                .orElse(null);
     }
 
     @Override
-    public Payment findById(UUID id) {
-        return (Payment) paymentRepository.findByPaymentID(id).orElseThrow();
+    public void deletePayment(UUID paymentId) {
+        paymentRepository.deleteById(paymentId);
     }
 
     @Override
-    public List<Payment> findAll() {
-        return paymentRepository.findAll();
+    public List<PaymentResponseDTO> getPaymentsByBookingId(UUID bookingId) {
+        return paymentRepository.findByBookingId(bookingId)
+                .stream()
+                .map(PaymentMapper::toDTO)
+                .collect(Collectors.toList());
     }
 }

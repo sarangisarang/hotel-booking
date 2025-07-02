@@ -1,8 +1,12 @@
 package com.booksys.hotel;
-
+import com.booksys.employee.Staff;
+import com.booksys.feedbackreview.FeedbackReview;
+import com.booksys.room.Room;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -24,11 +28,23 @@ public class Hotel {
     private String name;
 
     private String address;
-
     private String phone;
-
     private String email;
+    private String description;
+    private Double rating;
+
+
+    @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Room> rooms = new ArrayList<>();
+
+    @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Staff> staff = new ArrayList<>();
+
+    @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<FeedbackReview> feedbackReviews = new ArrayList<>();
 }
+
+
 
 
 

@@ -4,6 +4,7 @@ package com.booksys.guest;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
+import java.util.UUID;
 
 @Entity
 @Data
@@ -13,9 +14,8 @@ import java.time.LocalDate;
 public class Guest {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+    @GeneratedValue
+    private UUID id;
     private String firstName;
     private String lastName;
     private LocalDate birthDate;

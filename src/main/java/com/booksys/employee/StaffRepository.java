@@ -1,4 +1,4 @@
-package com.booksys.staff;
+package com.booksys.employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 import java.util.Optional;
