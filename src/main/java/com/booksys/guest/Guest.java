@@ -38,5 +38,4 @@ public class Guest {
 
     @OneToMany(mappedBy = "guest")
     private List<FeedbackReview> feedbackReviews;
-
 }

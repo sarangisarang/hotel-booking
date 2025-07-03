@@ -13,6 +13,7 @@ import java.util.UUID;
 /**
  * Entity representing a booking in the hotel system.
  */
+
 @Entity
 @Table(name = "bookings")
 @Data

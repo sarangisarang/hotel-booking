@@ -10,6 +10,7 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/api/feedback-reviews")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*")
 public class FeedbackReviewController {
 
     private final FeedbackReviewService feedbackReviewService;

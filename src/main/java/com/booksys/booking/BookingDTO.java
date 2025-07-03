@@ -1,11 +1,12 @@
 package com.booksys.booking;
 
 import lombok.*;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.UUID;
 
 /**
- * DTO (Data Transfer Object) for transferring booking data between client and server.
+ * BookingDTO is a Data Transfer Object for sending booking data to the frontend.
  */
 @Data
 @NoArgsConstructor
@@ -13,13 +14,16 @@ import java.util.UUID;
 @Builder
 public class BookingDTO {
 
+    private UUID id;
+
     private UUID guestId;
+    private String guestName; // Frontend display
 
     private UUID roomId;
+    private String roomNumber; // Frontend display
 
     private LocalDate checkInDate;
-
     private LocalDate checkOutDate;
-
-    private String status; // CONFIRMED, CANCELLED, COMPLETED, etc.
+    private BigDecimal totalAmount;
+    private String paymentStatus;
 }

@@ -13,6 +13,7 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/api/booksys/rooms")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*")
 public class RoomController {
 
     private final RoomService roomService;

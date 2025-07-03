@@ -8,6 +8,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/booksys/staff")
+@CrossOrigin(origins = "*")
 public class StaffController {
 
     @Autowired
