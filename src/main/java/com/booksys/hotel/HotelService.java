@@ -8,7 +8,7 @@ import java.util.UUID;
  */
 public interface HotelService {
     Hotel create(Hotel hotel);
-    List<Hotel> getAll();
+    List<HotelDTO> getAll();
     Hotel getById(UUID id);
     void delete(UUID id);
 }

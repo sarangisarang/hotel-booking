@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 /**
  * Service implementation for HotelService.
@@ -21,8 +22,18 @@ public class HotelServiceImpl implements HotelService {
     }
 
     @Override
-    public List<Hotel> getAll() {
-        return hotelRepository.findAll();
+    public List<HotelDTO> getAll() {
+        return hotelRepository.findAll().stream()
+                .map(hotel -> HotelDTO.builder()
+                        .id(hotel.getId())
+                        .name(hotel.getName())
+                        .address(hotel.getAddress())
+                        .phone(hotel.getPhone())
+                        .email(hotel.getEmail())
+                        .description(hotel.getDescription())
+                        .rating(hotel.getRating())
+                        .build())
+                .collect(Collectors.toList());
     }
 
     @Override

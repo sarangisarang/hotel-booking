@@ -5,7 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75d41fcd-92cf-4385-bb52-fdf15e1d0717" name="Changes" comment="Merge remote-tracking branch 'github/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/test/java/com/booksys/hotel/GuestServiceTest.java">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booksys/invoice/Invoice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booksys/invoice/InvoiceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booksys/invoice/InvoiceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booksys/invoice/InvoiceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booksys/invoice/InvoiceServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booksys/service/ServiceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booksys/service/ServiceEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booksys/service/ServiceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booksys/service/ServiceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booksys/service/ServiceServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booksys/servicerequest/ServiceRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booksys/servicerequest/ServiceRequestRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booksys/servicerequest/ServiceRequestService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booksys/servicerequest/ServiceRequestServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booksys/servicerequest/ServiceRequestStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/booking/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/booking/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/guest/Guest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/guest/Guest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booksys/hotel/HotelServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,15 +63,15 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {}
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:/sarangisarang/hotels.git",
-    "accountId": "735dde6f-513b-40ce-9b46-f78744e12422"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:/sarangisarang/hotels.git&quot;,
+    &quot;accountId&quot;: &quot;735dde6f-513b-40ce-9b46-f78744e12422&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -65,36 +89,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HotelApplication.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Docker.Dockerfile.executor": "Run",
-    "JUnit.BookingServiceTest.executor": "Run",
-    "JUnit.BookingServiceTest.givenCheckinCheckoutWithOverlap.executor": "Run",
-    "JUnit.BookingServiceTest.givenCheckinCheckoutWithoutOverlap.executor": "Run",
-    "JUnit.GuestServiceTest.GiveAllWhenHasALL.executor": "Run",
-    "JUnit.GuestServiceTest.GiveAllWhenHasAllDelete.executor": "Run",
-    "JUnit.GuestServiceTest.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "didalgo.chatgpt.ToolWindow.ACTIVE": "GPT_4",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/python/dev/hotel",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.34416243",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HotelApplication.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BookingServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BookingServiceTest.givenCheckinCheckoutWithOverlap.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BookingServiceTest.givenCheckinCheckoutWithoutOverlap.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GuestServiceTest.GiveAllWhenHasALL.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GuestServiceTest.GiveAllWhenHasAllDelete.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GuestServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;didalgo.chatgpt.ToolWindow.ACTIVE&quot;: &quot;GPT_4&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/python/dev/hotel&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.34416243&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "HTML"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;HTML&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.booksys.booking" />

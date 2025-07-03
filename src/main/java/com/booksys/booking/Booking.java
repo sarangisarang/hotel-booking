@@ -1,5 +1,6 @@
 package com.booksys.booking;
 import com.booksys.guest.Guest;
+import com.booksys.invoice.Invoice;
 import com.booksys.payment.Payment;
 import com.booksys.payment.PaymentStatus;
 import com.booksys.room.Room;
@@ -24,23 +25,16 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-    @Column(nullable = false)
-    private LocalDate checkInDate;
-
-    @Column(nullable = false)
-    private LocalDate checkOutDate;
-
-    @Column(nullable = false)
-    private String status; // e.g., "CONFIRMED", "CANCELLED", "COMPLETED"
-
     @ManyToOne
-    @JoinColumn(name = "guest_id", nullable = false)
+    @JoinColumn(name = "guest_id")
     private Guest guest;
 
     @ManyToOne
-    @JoinColumn(name = "room_id", nullable = false)
+    @JoinColumn(name = "room_id")
     private Room room;
 
+    private LocalDate checkInDate;
+    private LocalDate checkOutDate;
     private BigDecimal totalAmount;
 
     @Enumerated(EnumType.STRING)
@@ -49,6 +43,7 @@ public class Booking {
     @OneToOne(mappedBy = "booking", cascade = CascadeType.ALL)
     private Payment payment;
 
-    //@OneToOne(mappedBy = "booking", cascade = CascadeType.ALL)
-    //private Invoice invoice;
+    @OneToOne(mappedBy = "booking", cascade = CascadeType.ALL)
+    private Invoice invoice;
+
 }
