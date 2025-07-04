@@ -50,12 +50,13 @@ VALUES
 -- Services
 INSERT INTO service_entity (id, name, description, price)
 VALUES
-(1, 'Laundry', 'Laundry and ironing service', 15.00),
-(2, 'Room Cleaning', 'Daily room cleaning', 10.00),
-(3, 'Breakfast', 'Buffet breakfast', 12.00);
+('9ffd712e-9bec-4f41-a586-fbde15fbabcd', 'Laundry', 'Laundry and ironing service', 15.00),
+('5ffd712e-9bec-4f41-a586-fbde15fbabcd', 'Room Cleaning', 'Daily room cleaning', 10.00),
+('7ffd712e-9bec-4f41-a586-fbde15fbabcd', 'Breakfast', 'Buffet breakfast', 12.00);
+
 
 -- Service Requests
 INSERT INTO service_request (id, request_date, guest_id, service_id, status)
 VALUES
-('3ffd712e-9bec-4f41-a586-fbde15fbabcd', '2024-03-04T09:00:00', 'fd6f9c8d-f15a-448f-83d3-8e55d2c8b432', 1, 'PENDING'),
-('3ffd712e-9bec-4f41-a586-fbde15fbabce', '2024-03-05T09:30:00', 'fd6f9c8d-f15a-448f-83d3-8e55d2c8b643', 2, 'COMPLETED');
+('a1fd712e-9bec-4f41-a586-fbde15fb0001', '2024-03-04T09:00:00', 'fd6f9c8d-f15a-448f-83d3-8e55d2c8b432', '9ffd712e-9bec-4f41-a586-fbde15fbabcd', 'PENDING'),
+('a2fd712e-9bec-4f41-a586-fbde15fb0002', '2024-03-05T09:30:00', 'fd6f9c8d-f15a-448f-83d3-8e55d2c8b643', '5ffd712e-9bec-4f41-a586-fbde15fbabcd', 'COMPLETED');

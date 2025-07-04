@@ -1,42 +1,56 @@
 package com.booksys.employee;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/booksys/staff")
+@RequestMapping("/api/staff")
 @CrossOrigin(origins = "*")
 public class StaffController {
 
+    private final StaffService staffService;
+
     @Autowired
-    private StaffService staffService;
-
-
-    @PostMapping("/save") //ok
-    public ResponseEntity<Staff> save(@RequestBody Staff staff){
-        return  new ResponseEntity<>(staffService.save(staff),HttpStatus.OK);
+    public StaffController(StaffService staffService) {
+        this.staffService = staffService;
     }
 
-    @GetMapping("/staffs/{name}") //ok
-    public ResponseEntity<List<Staff>> findByNameStaff(@PathVariable String name ){
-        return new ResponseEntity<>(staffService.findByName(name), HttpStatus.OK);
+    // 1. Get all staff members
+    @GetMapping
+    public ResponseEntity<List<StaffDTO>> getAllStaff() {
+        List<StaffDTO> staffList = staffService.getAllStaff();
+        return ResponseEntity.ok(staffList);
     }
 
-    @GetMapping("/staff/{id}") //ok
-    public ResponseEntity<Staff> findByid(@PathVariable UUID id){
-        return new ResponseEntity<>(staffService.findByIdStaff(id),HttpStatus.OK);
+    // 2. Get staff member by ID
+    @GetMapping("/{id}")
+    public ResponseEntity<StaffDTO> getStaffById(@PathVariable("id") UUID id) {
+        StaffDTO staff = staffService.getStaffById(id);
+        return ResponseEntity.ok(staff);
     }
 
-    @GetMapping("/all") //ok
-    public ResponseEntity<List<Staff>> findAllStaff(){
-        return new ResponseEntity<>(staffService.findAllStaff(),HttpStatus.OK);
+    // 3. Create new staff member
+    @PostMapping
+    public ResponseEntity<StaffDTO> createStaff(@RequestBody StaffDTO staffDTO) {
+        StaffDTO created = staffService.createStaff(staffDTO);
+        return ResponseEntity.ok(created);
     }
 
-    @DeleteMapping("/{id}") //ok
-    public ResponseEntity<List<Staff>> deleteByIdStaff(@PathVariable UUID id){
-        return new ResponseEntity<>(staffService.deleteStaffById(id),HttpStatus.OK);
+    // 4. Update existing staff member
+    @PutMapping("/{id}")
+    public ResponseEntity<StaffDTO> updateStaff(@PathVariable("id") UUID id,
+                                                @RequestBody StaffDTO staffDTO) {
+        StaffDTO updated = staffService.updateStaff(id, staffDTO);
+        return ResponseEntity.ok(updated);
+    }
+
+    // 5. Delete staff member
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteStaff(@PathVariable("id") UUID id) {
+        staffService.deleteStaff(id);
+        return ResponseEntity.noContent().build();
     }
 }

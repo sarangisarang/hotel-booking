@@ -7,7 +7,8 @@ import java.util.List; import java.util.UUID;
  GuestService defines the business operations for managing guests using DTOs. */
 public interface GuestService {
 
-    GuestDTO createGuest(GuestDTO guestDTO);
+
+    Guest createGuest(Guest guest);
 
     GuestDTO updateGuest(UUID guestId, GuestDTO guestDTO);
 

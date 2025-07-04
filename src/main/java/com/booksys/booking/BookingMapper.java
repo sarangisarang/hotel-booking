@@ -1,30 +1,43 @@
 package com.booksys.booking;
+
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.Mappings;
-import org.mapstruct.factory.Mappers;
+import org.springframework.stereotype.Component;
 
-/**
- * BookingMapper maps Booking entity to BookingDTO and vice versa using MapStruct.
- * This helps in transferring data to the frontend cleanly without exposing entity internals.
- */
 @Mapper(componentModel = "spring")
+@Component
 public interface BookingMapper {
 
-    BookingMapper INSTANCE = Mappers.getMapper(BookingMapper.class);
 
-    @Mappings({
-            @Mapping(source = "guest.id", target = "guestId"),
-            @Mapping(source = "guest.firstName", target = "guestName"),
-            @Mapping(source = "room.id", target = "roomId"),
-            @Mapping(source = "room.roomNumber", target = "roomNumber"),
-            @Mapping(source = "paymentStatus", target = "paymentStatus")
-    })
-    BookingDTO toDTO(Booking booking);
+    @Mapping(source = "checkInDate", target = "checkInDate")
+    @Mapping(source = "checkOutDate", target = "checkOutDate")
 
-    /**
-     * Note: Mapping from BookingDTO to Booking requires guest and room entities to be set externally
-     * or requires additional services to fetch them by ID before mapping.
-     */
-    Booking toEntity(BookingDTO bookingDTO);
+    default BookingDTO toDTO(Booking booking) {
+        if (booking == null) return null;
+
+        return BookingDTO.builder()
+                .id(booking.getId())
+                .checkInDate(booking.getCheckInDate())
+                .checkOutDate(booking.getCheckOutDate())
+                .paymentStatus(booking.getPaymentStatus())
+                .totalAmount(booking.getTotalAmount())
+                .guestId(booking.getGuest() != null ? booking.getGuest().getId() : null)
+                .roomId(booking.getRoom() != null ? booking.getRoom().getId() : null)
+                .guestName(booking.getGuest() != null ? booking.getGuest().getFirstName() + " " + booking.getGuest().getLastName() : "Unknown")
+                .roomNumber(booking.getRoom() != null ? booking.getRoom().getRoomNumber() : "Unknown")
+                .build();
+    }
+        default   Booking toEntity(BookingDTO dto) {
+        if (dto == null) return null;
+
+        return Booking.builder()
+                .id(dto.getId())
+                .checkInDate(dto.getCheckInDate())
+                .checkOutDate(dto.getCheckOutDate())
+                .paymentStatus(dto.getPaymentStatus())
+                .totalAmount(dto.getTotalAmount())
+                .bookingStatus(dto.getBookingStatus())
+                .build();
+    }
+
 }

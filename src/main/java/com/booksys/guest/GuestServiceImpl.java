@@ -1,6 +1,7 @@
 package com.booksys.guest;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.UUID;
@@ -16,11 +17,16 @@ import java.util.stream.Collectors;
 
 public class GuestServiceImpl implements GuestService {
 
+
+    @Autowired
     private final GuestRepository guestRepository;
+
+    @Autowired
     private final GuestMapper guestMapper;
 
-    @Override public GuestDTO createGuest(GuestDTO guestDTO) { Guest guest = guestMapper.toEntity(guestDTO);
-        return guestMapper.toDTO(guestRepository.save(guest));
+    @Override
+    public Guest createGuest(Guest guest) {
+        return guestRepository.save(guest);
     }
 
     @Override public GuestDTO updateGuest(UUID guestId, GuestDTO guestDTO) {
@@ -42,10 +48,21 @@ public class GuestServiceImpl implements GuestService {
     }
 
     @Override public List<GuestDTO> getAllGuests() {
-        return guestRepository.findAll().stream() .map(guestMapper::toDTO) .collect(Collectors.toList());
-    }
+            return guestRepository.findAll().stream()
+                    .map(guest -> GuestDTO.builder()
+                            .id(guest.getId())
+                            .firstName(guest.getFirstName())
+                            .lastName(guest.getLastName())
+                            .email(guest.getEmail())
+                            .phone(guest.getPhone())
+                            .address(guest.getAddress())
+                            .birthDate(guest.getBirthDate())
+                            .build())
+                    .collect(Collectors.toList());
+        }
 
-    @Override public void deleteGuest(UUID guestId) {
+
+        @Override public void deleteGuest(UUID guestId) {
         if (!guestRepository.existsById(guestId)) {
             throw new RuntimeException("Guest not found with ID: " + guestId);
         } guestRepository.deleteById(guestId); }

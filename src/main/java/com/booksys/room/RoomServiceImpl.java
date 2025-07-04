@@ -1,8 +1,6 @@
 package com.booksys.room;
-
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.UUID;
 
@@ -17,6 +15,9 @@ public class RoomServiceImpl implements RoomService {
 
     @Override
     public Room createRoom(Room room) {
+        if (roomRepository.existsByRoomNumber(room.getRoomNumber())) {
+            throw new IllegalArgumentException("Room number already exists!");
+        }
         return roomRepository.save(room);
     }
 

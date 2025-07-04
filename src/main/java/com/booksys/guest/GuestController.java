@@ -1,5 +1,4 @@
 package com.booksys.guest;
-
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,14 +10,15 @@ import java.util.UUID;
 //using DTOs for consistent, clean data structures with the frontend.
 @RestController
 @RequestMapping("/api/guests")
-@CrossOrigin(origins = "")
+@CrossOrigin(origins = "*")
 @RequiredArgsConstructor
+
 public class GuestController {
 
  private final GuestService guestService;
 
- @PostMapping public ResponseEntity<GuestDTO> createGuest(@RequestBody GuestDTO guestDTO) {
-     return ResponseEntity.ok(guestService.createGuest(guestDTO));
+ @PostMapping public ResponseEntity<Guest> createGuest(@RequestBody Guest guest) {
+     return ResponseEntity.ok(guestService.createGuest(guest));
  }
 
  @PutMapping("/{id}") public ResponseEntity<GuestDTO> updateGuest(@PathVariable UUID id, @RequestBody GuestDTO guestDTO) {

@@ -1,5 +1,4 @@
 package com.booksys.guest;
-
 import com.booksys.booking.Booking;
 import com.booksys.feedbackreview.FeedbackReview;
 import com.booksys.servicerequest.ServiceRequest;
@@ -16,6 +15,7 @@ import java.util.UUID;
 @Entity
 @Data
 @NoArgsConstructor
+@Table(name = "guest")
 @AllArgsConstructor
 @Builder
 public class Guest {
@@ -28,7 +28,7 @@ public class Guest {
     private String email;
     private String phone;
     private String address;
-    private LocalDate BirthDate;
+    private LocalDate birthDate;
 
     @OneToMany(mappedBy = "guest")
     private List<Booking> bookings;

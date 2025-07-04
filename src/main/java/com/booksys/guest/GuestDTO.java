@@ -1,6 +1,9 @@
 package com.booksys.guest;
 
-import lombok.*; import java.time.LocalDate; import java.util.UUID;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.*;
+import java.time.LocalDate;
+import java.util.UUID;
 
 /**
 
@@ -13,7 +16,6 @@ import lombok.*; import java.time.LocalDate; import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-
 public class GuestDTO {
     private UUID id;
     private String firstName;
@@ -21,5 +23,7 @@ public class GuestDTO {
     private String email;
     private String phone;
     private String address;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private LocalDate birthDate;
 }

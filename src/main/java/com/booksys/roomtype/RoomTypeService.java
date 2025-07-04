@@ -11,4 +11,5 @@ public interface RoomTypeService {
     List<RoomType> getAll();
     RoomType getById(UUID id);
     void delete(UUID id);
+    List<RoomTypeDTO> getAllDTO();
 }

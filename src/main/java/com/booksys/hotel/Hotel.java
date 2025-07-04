@@ -23,23 +23,23 @@ public class Hotel {
     @Id
     @GeneratedValue
     private UUID id;
-
     @Column(nullable = false)
     private String name;
-
     private String address;
     private String phone;
     private String email;
     private String description;
     private Double rating;
 
-
+    @Builder.Default
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Room> rooms = new ArrayList<>();
 
+    @Builder.Default
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Staff> staff = new ArrayList<>();
 
+    @Builder.Default
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<FeedbackReview> feedbackReviews = new ArrayList<>();
 }

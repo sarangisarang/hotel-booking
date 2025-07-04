@@ -24,22 +24,24 @@ public class Booking {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+
     private UUID id;
 
-    @ManyToOne
-    @JoinColumn(name = "guest_id")
-    private Guest guest;
+    private double totalAmount;
 
-    @ManyToOne
+    @Column(name = "check_in_date")
+    private LocalDate checkInDate;
+
+    @Column(name = "check_out_date")
+    private LocalDate checkOutDate;
+
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "room_id")
     private Room room;
 
-    private LocalDate checkInDate;
-    private LocalDate checkOutDate;
-    private BigDecimal totalAmount;
-
-    @Enumerated(EnumType.STRING)
-    private PaymentStatus paymentStatus;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "guest_id")
+    private Guest guest;
 
     @OneToOne(mappedBy = "booking", cascade = CascadeType.ALL)
     private Payment payment;
@@ -47,4 +49,9 @@ public class Booking {
     @OneToOne(mappedBy = "booking", cascade = CascadeType.ALL)
     private Invoice invoice;
 
+    @Enumerated(EnumType.STRING)
+    private PaymentStatus paymentStatus;
+
+    @Enumerated(EnumType.STRING)
+    private BookingStatus bookingStatus;
 }

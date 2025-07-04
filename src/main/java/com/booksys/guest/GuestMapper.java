@@ -1,14 +1,15 @@
 package com.booksys.guest;
 import org.mapstruct.Mapper;
+import org.mapstruct.ReportingPolicy;
 import org.mapstruct.factory.Mappers;
-import com.booksys.guest.Guest;
-import com.booksys.guest.GuestDTO;
+
 
 /**
  GuestMapper handles automatic conversion between Guest entity and GuestDTO
  using MapStruct for clean separation of layers.
  */
-@Mapper(componentModel = "spring")
+
+@Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface GuestMapper {
 
     GuestMapper INSTANCE = Mappers.getMapper(GuestMapper.class);

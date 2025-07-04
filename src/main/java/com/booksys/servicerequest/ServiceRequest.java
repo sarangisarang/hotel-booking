@@ -39,7 +39,7 @@ public class ServiceRequest {
     public void prePersist() {
         this.requestDate = LocalDateTime.now();
         if (this.status == null) {
-            this.status = ServiceRequestStatus.PENDING; // Default status if not set
+            this.status = ServiceRequestStatus.PENDING;
         }
     }
 }

@@ -3,40 +3,41 @@ package com.booksys.service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/services")
-@RequiredArgsConstructor
 @CrossOrigin(origins = "*")
+@RequiredArgsConstructor
 public class ServiceController {
 
     private final ServiceService serviceService;
 
     @PostMapping
-    public ResponseEntity<ServiceEntity> createService(@RequestBody ServiceEntity serviceEntity) {
-        return ResponseEntity.ok(serviceService.createService(serviceEntity));
+    public ResponseEntity<ServiceDTO> create(@RequestBody ServiceDTO dto) {
+        return ResponseEntity.ok(serviceService.createService(dto));
     }
 
     @GetMapping
-    public ResponseEntity<List<ServiceEntity>> getAllServices() {
+    public ResponseEntity<List<ServiceDTO>> getAll() {
         return ResponseEntity.ok(serviceService.getAllServices());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ServiceEntity> getServiceById(@PathVariable Long id) {
+    public ResponseEntity<ServiceDTO> getById(@PathVariable UUID id) {
         return ResponseEntity.ok(serviceService.getServiceById(id));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ServiceEntity> updateService(@PathVariable Long id, @RequestBody ServiceEntity updatedService) {
-        return ResponseEntity.ok(serviceService.updateService(id, updatedService));
+    public ResponseEntity<ServiceDTO> update(@PathVariable UUID id, @RequestBody ServiceDTO dto) {
+        return ResponseEntity.ok(serviceService.updateService(id, dto));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteService(@PathVariable Long id) {
+    public ResponseEntity<Void> delete(@PathVariable UUID id) {
         serviceService.deleteService(id);
         return ResponseEntity.noContent().build();
     }
-
 }

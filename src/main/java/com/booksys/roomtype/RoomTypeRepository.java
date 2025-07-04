@@ -1,7 +1,6 @@
 package com.booksys.roomtype;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-
 import java.util.UUID;
 
 /**

@@ -3,13 +3,13 @@ package com.booksys.booking;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.UUID;
 
 /**
  * BookingController exposes REST API endpoints for booking CRUD operations with DTOs.
  */
+
 @RestController
 @RequestMapping("/api/bookings")
 @CrossOrigin(origins = "*")

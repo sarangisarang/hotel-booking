@@ -2,6 +2,8 @@ package com.booksys.service;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ServiceRepository extends JpaRepository<ServiceEntity, Long> {
+import java.util.UUID;
+
+public interface ServiceRepository extends JpaRepository<ServiceEntity, UUID> {
 
 }

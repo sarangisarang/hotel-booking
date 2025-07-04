@@ -1,17 +1,14 @@
 package com.booksys.hotel;
-
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.UUID;
-
 /**
  * REST controller for managing hotels.
  */
 @RestController
-@RequestMapping("/api/books/hotels")
+@RequestMapping("/api/hotels")
 @RequiredArgsConstructor
 @CrossOrigin(origins = "*")
 public class HotelController {
@@ -39,6 +36,3 @@ public class HotelController {
         return ResponseEntity.noContent().build();
     }
 }
-
-
-

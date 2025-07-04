@@ -1,41 +1,66 @@
 package com.booksys.employee;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
-public class StaffServiceImpl implements StaffService{
+public class StaffServiceImpl implements StaffService {
 
     private final StaffRepository staffRepository;
 
+    @Autowired
     public StaffServiceImpl(StaffRepository staffRepository) {
         this.staffRepository = staffRepository;
     }
 
     @Override
-    public Staff save(Staff staff) {
-        return  staffRepository.save(staff);
+    public StaffDTO createStaff(StaffDTO staffDTO) {
+        Staff staff = StaffMapper.toEntity(staffDTO);
+        Staff saved = staffRepository.save(staff);
+        return StaffMapper.toDTO(saved);
     }
 
     @Override
-    public List<Staff> deleteStaffById(UUID id) {
-        Staff staff = (Staff) staffRepository.findByStaffID(id).orElseThrow();
-        staffRepository.delete(staff);
-        return staffRepository.findAll();
+    public StaffDTO getStaffById(UUID staffID) {
+        Optional<Staff> staffOptional = staffRepository.findById(String.valueOf(staffID));
+        return staffOptional.map(StaffMapper::toDTO)
+                .orElseThrow(() -> new RuntimeException("Staff not found with ID: " + staffID));
     }
 
     @Override
-    public List<Staff> findByName(String name) {
-        return staffRepository.findByFirstName(name);
+    public List<StaffDTO> getAllStaff() {
+        List<Staff> staffList = staffRepository.findAll();
+        return staffList.stream()
+                .map(StaffMapper::toDTO)
+                .collect(Collectors.toList());
     }
 
     @Override
-    public List<Staff> findAllStaff() {
-        return staffRepository.findAll();
+    public StaffDTO updateStaff(UUID staffID, StaffDTO staffDTO) {
+        Staff existing = staffRepository.findById(String.valueOf(staffID))
+                .orElseThrow(() -> new RuntimeException("Staff not found with ID: " + staffID));
+
+        existing.setFirstName(staffDTO.getFirstName());
+        existing.setLastName(staffDTO.getLastName());
+        existing.setPositions(staffDTO.getPositions());
+        existing.setSalary(staffDTO.getSalary());
+        existing.setDateOfBirth(staffDTO.getDateOfBirth());
+        existing.setPhone(staffDTO.getPhone());
+        existing.setEmail(staffDTO.getEmail());
+        existing.setHireDate(staffDTO.getHireDate());
+
+        Staff updated = staffRepository.save(existing);
+        return StaffMapper.toDTO(updated);
     }
 
     @Override
-    public Staff findByIdStaff(UUID id) {
-        return (Staff) staffRepository.findByStaffID(id).orElseThrow();
+    public void deleteStaff(UUID staffID) {
+        if (!staffRepository.existsById(String.valueOf(staffID))) {
+            throw new RuntimeException("Staff not found with ID: " + staffID);
+        }
+        staffRepository.deleteById(String.valueOf(staffID));
     }
 }
